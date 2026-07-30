@@ -1248,7 +1248,7 @@
 
         /* ========== KONFIGURASI ========== */
         // Ganti URL ini dengan URL Google Apps Script Anda untuk integrasi RSVP
-        const SCRIPT_URL = 'YOUR_GOOGLE_SCRIPT_URL_HERE';
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzEkIk276rgYnjANCbNMpBwmV0vm6C9soidgbt1hEXbJ4Aw4n4U9a4EL30q5C5lxQ2f8Q/exec';
 
         // Tanggal acara untuk countdown (28 Desember 2025, 08:00 WIB)
         const WEDDING_DATE = new Date('2025-12-28T08:00:00+07:00').getTime();
@@ -1505,7 +1505,7 @@
             rsvpSubmitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Mengirim...';
 
             // Kirim ke Google Apps Script
-            if (SCRIPT_URL !== 'YOUR_GOOGLE_SCRIPT_URL_HERE') {
+            if (SCRIPT_URL !== 'https://script.google.com/macros/s/AKfycbzEkIk276rgYnjANCbNMpBwmV0vm6C9soidgbt1hEXbJ4Aw4n4U9a4EL30q5C5lxQ2f8Q/exec') {
                 fetch(SCRIPT_URL, {
                     method: 'POST',
                     body: formData,
@@ -1515,12 +1515,17 @@
                     showToast('Terima kasih! Konfirmasi Anda telah terkirim');
                     rsvpForm.reset();
                     // Tambahkan ucapan ke feed secara lokal
-                    addFeedItem({
-                        nama: name,
-                        kehadiran: kehadiran.value,
-                        ucapan: ucapan || 'Mengirimkan konfirmasi kehadiran.',
-                        timestamp: new Date().toISOString()
-                    });
+                    // Di dalam blok .then() setelah POST berhasil:
+addFeedItem({
+    nama: name,
+    kehadiran: kehadiran.value,
+    jumlah: jumlah,
+    ucapan: ucapan || '',
+    timestamp: new Date().toISOString()
+}, true); // 'true' = prepend ke atas
+
+// Setelah itu, delay sebentar lalu fetch ulang untuk sinkronisasi
+setTimeout(fetchFeedData, 2000);
                 })
                 .catch(() => {
                     showToast('Gagal mengirim. Silakan coba lagi.');
@@ -1534,105 +1539,190 @@
                 setTimeout(() => {
                     showToast('Terima kasih! Konfirmasi Anda telah terkirim (Demo)');
                     rsvpForm.reset();
-                    addFeedItem({
-                        nama: name,
-                        kehadiran: kehadiran.value,
-                        ucapan: ucapan || 'Mengirimkan konfirmasi kehadiran.',
-                        timestamp: new Date().toISOString()
-                    });
+                    // Di dalam blok else (mode demo) setelah setTimeout:
+addFeedItem({
+    nama: name,
+    kehadiran: kehadiran.value,
+    jumlah: jumlah,
+    ucapan: ucapan || '',
+    timestamp: new Date().toISOString()
+}, true);
                     rsvpSubmitBtn.disabled = false;
                     rsvpSubmitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Kirim Konfirmasi';
                 }, 1200);
             }
         });
 
-        /* ========== 10. RSVP LIVE FEED ========== */
-        const rsvpFeed = document.getElementById('rsvpFeed');
-        const emptyFeed = document.getElementById('emptyFeed');
-        const feedCount = document.getElementById('feedCount');
-        let feedItems = [];
+        /* ========== 10. RSVP LIVE FEED (AUTO-REFRESH) ========== */
+const rsvpFeed = document.getElementById('rsvpFeed');
+const emptyFeed = document.getElementById('emptyFeed');
+const feedCount = document.getElementById('feedCount');
+let feedItems = [];
+let lastFetchCount = 0; // Untuk tracking data baru
+let feedPollingInterval = null;
 
-        // Fungsi tambah item ke feed
-        function addFeedItem(data) {
-            emptyFeed.style.display = 'none';
-            feedItems.unshift(data);
+// Escape HTML untuk keamanan
+function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.appendChild(document.createTextNode(text));
+    return div.innerHTML;
+}
 
-            const item = document.createElement('div');
-            item.className = 'border border-gold/15 rounded-lg p-4 bg-kraton-dark/40';
-            item.style.animation = 'fadeInUp 0.5s ease-out';
+// Fungsi render satu item feed
+function renderFeedItem(data) {
+    const item = document.createElement('div');
+    item.className = 'border border-gold/15 rounded-lg p-4 bg-kraton-dark/40';
+    item.style.animation = 'fadeInUp 0.5s ease-out';
+    item.setAttribute('data-timestamp', data.timestamp);
 
-            // Format waktu
-            const date = new Date(data.timestamp);
-            const timeStr = date.toLocaleDateString('id-ID', {
+    // Format waktu
+    let timeStr = '';
+    try {
+        const date = new Date(data.timestamp);
+        if (!isNaN(date.getTime())) {
+            timeStr = date.toLocaleDateString('id-ID', {
                 day: 'numeric', month: 'long', year: 'numeric'
             }) + ' ' + date.toLocaleTimeString('id-ID', {
                 hour: '2-digit', minute: '2-digit'
             });
-
-            // Warna badge kehadiran
-            const hadirColor = data.kehadiran === 'Hadir'
-                ? 'bg-green-900/40 text-green-300 border-green-700/30'
-                : 'bg-red-900/40 text-red-300 border-red-700/30';
-
-            item.innerHTML =
-                '<div class="flex items-center justify-between mb-2">' +
-                    '<h5 class="font-jakarta text-gold text-sm font-semibold">' + escapeHtml(data.nama) + '</h5>' +
-                    '<span class="text-[10px] font-jakarta text-gold-light/30">' + timeStr + '</span>' +
-                '</div>' +
-                '<span class="inline-block text-[10px] font-jakarta px-2 py-0.5 rounded-full border ' + hadirColor + ' mb-2">' + escapeHtml(data.kehadiran) + '</span>' +
-                (data.ucapan ? '<p class="font-jakarta text-gold-light/60 text-sm leading-relaxed">' + escapeHtml(data.ucapan) + '</p>' : '');
-
-            rsvpFeed.insertBefore(item, rsvpFeed.firstChild);
-            feedCount.textContent = feedItems.length + ' ucapan';
         }
+    } catch(e) {
+        timeStr = data.timestamp || '';
+    }
 
-        // Escape HTML untuk keamanan
-        function escapeHtml(text) {
-            const div = document.createElement('div');
-            div.appendChild(document.createTextNode(text));
-            return div.innerHTML;
-        }
+    // Warna badge kehadiran
+    const hadirColor = data.kehadiran === 'Hadir'
+        ? 'bg-green-900/40 text-green-300 border-green-700/30'
+        : 'bg-red-900/40 text-red-300 border-red-700/30';
 
-        // Muat data awal dari Google Sheets (jika URL sudah dikonfigurasi)
-        function loadFeedData() {
-            if (SCRIPT_URL === 'YOUR_GOOGLE_SCRIPT_URL_HERE') {
-                // Mode demo: tampilkan contoh ucapan
-                const demoData = [
-                    {
-                        nama: 'Budi Santoso',
-                        kehadiran: 'Hadir',
-                        ucapan: 'Sugeng rawuh kanthi pinanggih. Mugi sami-sami dipun-paringi kebahagiaan langgeng. Matur nuwun atas undanganipun.',
-                        timestamp: '2025-11-20T10:30:00+07:00'
-                    },
-                    {
-                        nama: 'Siti Aminah',
-                        kehadiran: 'Hadir',
-                        ucapan: 'Assalamualaikum, selamat menempuh hidup baru. Semoga menjadi keluarga yang sakinah mawaddah warahmah. Aamiin.',
-                        timestamp: '2025-11-21T14:15:00+07:00'
-                    },
-                    {
-                        nama: 'Agus Prayitno',
-                        kehadiran: 'Hadir',
-                        ucapan: 'Wilujeng palakrama! Mugi karahayon tansah ngampingi sagala langkah sami-sami. Nuwun sanget.',
-                        timestamp: '2025-11-22T09:00:00+07:00'
-                    }
-                ];
-                demoData.forEach(d => addFeedItem(d));
-                return;
+    item.innerHTML =
+        '<div class="flex items-center justify-between mb-2">' +
+            '<h5 class="font-jakarta text-gold text-sm font-semibold">' + escapeHtml(data.nama) + '</h5>' +
+            '<span class="text-[10px] font-jakarta text-gold-light/30 flex-shrink-0 ml-2">' + timeStr + '</span>' +
+        '</div>' +
+        '<span class="inline-block text-[10px] font-jakarta px-2 py-0.5 rounded-full border ' + hadirColor + ' mb-2">' + escapeHtml(data.kehadiran) + '</span>' +
+        (data.ucapan ? '<p class="font-jakarta text-gold-light/60 text-sm leading-relaxed">' + escapeHtml(data.ucapan) + '</p>' : '');
+
+    return item;
+}
+
+// Tambah item baru ke feed (dari submit form atau polling)
+function addFeedItem(data, prepend) {
+    emptyFeed.style.display = 'none';
+
+    // Cegah duplikat berdasarkan timestamp + nama
+    const isDuplicate = feedItems.some(existing =>
+        existing.timestamp === data.timestamp && existing.nama === data.nama
+    );
+    if (isDuplicate) return;
+
+    feedItems.push(data);
+
+    const item = renderFeedItem(data);
+    if (prepend) {
+        rsvpFeed.insertBefore(item, rsvpFeed.firstChild);
+    } else {
+        rsvpFeed.appendChild(item);
+    }
+
+    feedCount.textContent = feedItems.length + ' ucapan';
+}
+
+// Render ulang seluruh feed dari awal (dipakai saat load pertama & polling)
+function renderFullFeed(dataArray) {
+    // Bersihkan feed yang ada
+    rsvpFeed.innerHTML = '';
+
+    if (!dataArray || dataArray.length === 0) {
+        emptyFeed.style.display = 'block';
+        feedItems = [];
+        feedCount.textContent = '0 ucapan';
+        lastFetchCount = 0;
+        return;
+    }
+
+    emptyFeed.style.display = 'none';
+    feedItems = dataArray;
+    lastFetchCount = dataArray.length;
+
+    // Render semua item (data sudah diurutkan terbaru dulu dari server)
+    dataArray.forEach(data => {
+        const item = renderFeedItem(data);
+        rsvpFeed.appendChild(item);
+    });
+
+    feedCount.textContent = dataArray.length + ' ucapan';
+}
+
+// Fetch data dari Google Sheets
+function fetchFeedData() {
+    if (SCRIPT_URL === 'https://script.google.com/macros/s/AKfycbzEkIk276rgYnjANCbNMpBwmV0vm6C9soidgbt1hEXbJ4Aw4n4U9a4EL30q5C5lxQ2f8Q/exec') return;
+
+    fetch(SCRIPT_URL + '?action=get&t=' + Date.now())
+        .then(res => res.json())
+        .then(data => {
+            if (Array.isArray(data)) {
+                // Jika jumlah data berubah, ada data baru
+                if (data.length !== lastFetchCount) {
+                    renderFullFeed(data);
+                }
             }
+        })
+        .catch(() => {
+            // Gagal fetch, diamkan saja (tidak perlu error)
+        });
+}
 
-            fetch(SCRIPT_URL + '?action=get')
-                .then(res => res.json())
-                .then(data => {
-                    if (Array.isArray(data)) {
-                        data.forEach(d => addFeedItem(d));
-                    }
-                })
-                .catch(() => {
-                    // Gagal memuat, tampilkan pesan kosong
-                });
+// Muat data awal
+function loadFeedData() {
+    if (SCRIPT_URL === 'https://script.google.com/macros/s/AKfycbzEkIk276rgYnjANCbNMpBwmV0vm6C9soidgbt1hEXbJ4Aw4n4U9a4EL30q5C5lxQ2f8Q/exec') {
+        // Mode demo: tampilkan contoh ucapan
+        const demoData = [
+            {
+                nama: 'Budi Santoso',
+                kehadiran: 'Hadir',
+                ucapan: 'Sugeng rawuh kanthi pinanggih. Mugi sami-sami dipun-paringi kebahagiaan langgeng. Matur nuwun atas undanganipun.',
+                timestamp: '2025-11-20T10:30:00+07:00'
+            },
+            {
+                nama: 'Siti Aminah',
+                kehadiran: 'Hadir',
+                ucapan: 'Assalamualaikum, selamat menempuh hidup baru. Semoga menjadi keluarga yang sakinah mawaddah warahmah. Aamiin.',
+                timestamp: '2025-11-21T14:15:00+07:00'
+            },
+            {
+                nama: 'Agus Prayitno',
+                kehadiran: 'Hadir',
+                ucapan: 'Wilujeng palakrama! Mugi karahayon tansah ngampingi sagala langkah sami-sami. Nuwun sanget.',
+                timestamp: '2025-11-22T09:00:00+07:00'
+            }
+        ];
+        renderFullFeed(demoData);
+        return;
+    }
+
+    // Mode live: fetch dari Google Sheets
+    fetchFeedData();
+
+    // Polling setiap 8 detik untuk cek data baru
+    feedPollingInterval = setInterval(fetchFeedData, 8000);
+}
+loadFeedData();
+
+// Hentikan polling jika halaman tidak terlihat (hemat bandwidth)
+document.addEventListener('visibilitychange', function() {
+    if (document.hidden) {
+        if (feedPollingInterval) {
+            clearInterval(feedPollingInterval);
+            feedPollingInterval = null;
         }
-        loadFeedData();
+    } else {
+        if (SCRIPT_URL !== 'https://script.google.com/macros/s/AKfycbzEkIk276rgYnjANCbNMpBwmV0vm6C9soidgbt1hEXbJ4Aw4n4U9a4EL30q5C5lxQ2f8Q/exec' && !feedPollingInterval) {
+            fetchFeedData(); // Langsung cek saat kembali
+            feedPollingInterval = setInterval(fetchFeedData, 8000);
+        }
+    }
+});
 
         /* ========== 11. PARALLAX HALUS PADA SCROLL ========== */
         let ticking = false;
