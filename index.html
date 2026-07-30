@@ -65,18 +65,6 @@
         ::-webkit-scrollbar-track { background: var(--ivory-dark); }
         ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 3px; }
 
-        /* ========== BATIK KAWUNG — opacity lebih terasa ========== */
-        .batik-kawung-bg {
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72'%3E%3Cellipse cx='36' cy='16' rx='8' ry='13' fill='none' stroke='%23D4AF37' stroke-width='.6' opacity='.1'/%3E%3Cellipse cx='16' cy='36' rx='13' ry='8' fill='none' stroke='%23D4AF37' stroke-width='.6' opacity='.1'/%3E%3Cellipse cx='56' cy='36' rx='13' ry='8' fill='none' stroke='%23D4AF37' stroke-width='.6' opacity='.1'/%3E%3Cellipse cx='36' cy='56' rx='8' ry='13' fill='none' stroke='%23D4AF37' stroke-width='.6' opacity='.1'/%3E%3Ccircle cx='36' cy='36' r='4' fill='none' stroke='%23D4AF37' stroke-width='.6' opacity='.1'/%3E%3C/svg%3E");
-            background-size: 72px 72px;
-        }
-
-        .batik-parang-bg {
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='88'%3E%3Cpath d='M22 0C9 13 0 22 0 33S9 54 22 66s22 20 22 33' fill='none' stroke='%23D4AF37' stroke-width='.8' opacity='.07'/%3E%3Cpath d='M22 0C35 13 44 22 44 33S35 54 22 66s-22 20-22 33' fill='none' stroke='%23D4AF37' stroke-width='.8' opacity='.07' transform='translate(44 0)'/%3E%3C/svg%3E");
-            background-size: 44px 88px;
-        }
-
-        /* ========== SECTION BACKGROUNDS ========== */
         .section-cream-kawung {
             background-color: #FAF6EE;
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72'%3E%3Cellipse cx='36' cy='16' rx='8' ry='13' fill='none' stroke='%23D4AF37' stroke-width='.5' opacity='.09'/%3E%3Cellipse cx='16' cy='36' rx='13' ry='8' fill='none' stroke='%23D4AF37' stroke-width='.5' opacity='.09'/%3E%3Cellipse cx='56' cy='36' rx='13' ry='8' fill='none' stroke='%23D4AF37' stroke-width='.5' opacity='.09'/%3E%3Cellipse cx='36' cy='56' rx='8' ry='13' fill='none' stroke='%23D4AF37' stroke-width='.5' opacity='.09'/%3E%3Ccircle cx='36' cy='36' r='4' fill='none' stroke='%23D4AF37' stroke-width='.5' opacity='.09'/%3E%3C/svg%3E");
@@ -99,7 +87,6 @@
             background-size: 44px 88px;
         }
 
-        /* ========== JOGLO WATERMARK (background section) ========== */
         .joglo-watermark {
             position: relative;
         }
@@ -109,10 +96,9 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: min(600px, 90vw);
-            height: auto;
+            width: min(550px, 85vw);
             aspect-ratio: 2/1;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 220' fill='%23D4AF37'%3E%3Cpath d='M200 8 L168 48 L172 52 L148 78 L152 82 L120 112 L124 116 L80 148 L84 152 L50 176 L50 185 L130 185 L130 200 L145 200 L145 185 L255 185 L255 200 L270 200 L270 185 L350 185 L350 176 L316 152 L320 148 L276 116 L280 112 L248 82 L252 78 L228 52 L232 48Z' opacity='.06'/%3E%3Crect x='130' y='185' width='15' height='15' opacity='.06'/%3E%3Crect x='255' y='185' width='15' height='15' opacity='.06'/%3E%3Crect x='80' y='148' width='4' height='37' opacity='.05'/%3E%3Crect x='316' y='148' width='4' height='37' opacity='.05'/%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 220' fill='%23D4AF37'%3E%3Cpath d='M200 8 L168 48 L172 52 L148 78 L152 82 L120 112 L124 116 L80 148 L84 152 L50 176 L50 195 L130 195 L130 210 L145 210 L145 195 L255 195 L255 210 L270 210 L270 195 L350 195 L350 176 L316 152 L320 148 L276 116 L280 112 L248 82 L252 78 L228 52 L232 48Z' opacity='.055'/%3E%3Crect x='130' y='185' width='15' height='15' opacity='.055'/%3E%3Crect x='255' y='185' width='15' height='15' opacity='.055'/%3E%3C/svg%3E");
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
@@ -121,7 +107,6 @@
         }
         .joglo-watermark > * { position: relative; z-index: 1; }
 
-        /* ========== GOLD SHADOW ========== */
         .gold-shadow {
             box-shadow: 0 8px 32px rgba(212,175,55,0.18), 0 2px 8px rgba(0,0,0,0.06), inset 0 1px 0 rgba(255,255,255,0.9);
         }
@@ -129,7 +114,6 @@
             box-shadow: 0 12px 44px rgba(212,175,55,0.22), 0 4px 12px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.95);
         }
 
-        /* ========== ORNAMEN SUDUT UKIRAN ========== */
         .ornament-corner { position: relative; }
         .ornament-corner::before, .ornament-corner::after {
             content: '';
@@ -218,7 +202,6 @@
         .gold-frame-double { border: 2px solid var(--accent); outline: 1px solid var(--accent-light); outline-offset: 5px; }
         .gold-frame { border: 2px solid var(--accent); }
 
-        /* ========== DIVIDER ETNIK ========== */
         .javanese-divider {
             display: flex; align-items: center; justify-content: center;
             gap: 10px; padding: 16px 0;
@@ -236,55 +219,48 @@
             border-radius: 50%; flex-shrink: 0;
         }
 
-        /* ========== JOGLO DIVIDER (Rumah Jawa sebagai pembatas section) ========== */
         .joglo-divider {
-            display: flex; align-items: flex-end; justify-content: center;
-            padding: 20px 0; gap: 0; position: relative;
+            display: flex; align-items: center; justify-content: center;
+            padding: 20px 16px; gap: 0; position: relative;
         }
         .joglo-divider .jd-line {
             flex: 1; height: 1px;
-            background: linear-gradient(90deg, transparent 0%, rgba(212,175,55,0.1) 15%, rgba(212,175,55,0.4) 50%, rgba(212,175,55,0.1) 85%, transparent 100%);
-            align-self: center;
+            background: linear-gradient(90deg, transparent 0%, rgba(212,175,55,0.1) 15%, rgba(212,175,55,0.45) 50%, rgba(212,175,55,0.1) 85%, transparent 100%);
         }
         .joglo-divider .jd-icon {
             flex-shrink: 0; width: 80px; height: 56px;
-            color: var(--accent); opacity: 0.25;
-            margin: 0 6px;
+            color: var(--accent); opacity: 0.3; margin: 0 8px;
         }
         .joglo-divider .jd-dot {
             width: 3px; height: 3px; background: var(--accent);
-            border-radius: 50%; flex-shrink: 0; opacity: 0.4;
-            align-self: center;
+            border-radius: 50%; flex-shrink: 0; opacity: 0.5;
         }
 
-        /* Joglo divider besar (hero / footer) */
-        .joglo-divider-lg { padding: 24px 0; }
+        .joglo-divider-lg { padding: 24px 16px; }
         .joglo-divider-lg .jd-icon {
-            width: 140px; height: 98px; opacity: 0.18; margin: 0 10px;
+            width: 140px; height: 98px; opacity: 0.22; margin: 0 12px;
         }
         .joglo-divider-lg .jd-dot {
-            width: 4px; height: 4px; opacity: 0.35;
+            width: 4px; height: 4px; opacity: 0.45;
         }
 
-        /* ========== GUNUNGAN DIVIDER ========== */
         .gunungan-divider {
             display: flex; align-items: center; justify-content: center;
-            padding: 14px 0; position: relative;
+            padding: 14px 16px; position: relative;
         }
         .gunungan-divider .gun-line {
             flex: 1; height: 1px;
-            background: linear-gradient(90deg, transparent 0%, rgba(212,175,55,0.1) 20%, rgba(212,175,55,0.35) 50%, rgba(212,175,55,0.1) 80%, transparent 100%);
+            background: linear-gradient(90deg, transparent 0%, rgba(212,175,55,0.1) 20%, rgba(212,175,55,0.4) 50%, rgba(212,175,55,0.1) 80%, transparent 100%);
         }
         .gunungan-divider .gun-icon {
             width: 32px; height: 44px; flex-shrink: 0;
-            color: var(--accent); opacity: 0.2; margin: 0 6px;
+            color: var(--accent); opacity: 0.25; margin: 0 8px;
         }
         .gunungan-divider .gun-dot {
             width: 3px; height: 3px; background: var(--accent);
-            border-radius: 50%; flex-shrink: 0; opacity: 0.4;
+            border-radius: 50%; flex-shrink: 0; opacity: 0.5;
         }
 
-        /* ========== Animasi ========== */
         @keyframes fadeInUp { from { opacity:0; transform:translateY(40px); } to { opacity:1; transform:translateY(0); } }
         @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
         @keyframes scaleIn { from { opacity:0; transform:scale(0.85); } to { opacity:1; transform:scale(1); } }
@@ -310,7 +286,6 @@
         .reveal-scale { opacity:0; transform:scale(0.85); transition: all .8s cubic-bezier(.4,0,.2,1); }
         .reveal-scale.active { opacity:1; transform:scale(1); }
 
-        /* ========== Cover ========== */
         .cover-bg {
             background:
                 radial-gradient(ellipse at 20% 50%, rgba(6,78,59,0.4) 0%, transparent 50%),
@@ -325,12 +300,35 @@
             background-size: 44px 88px, 80px 80px, 80px 80px;
         }
 
-        /* ========== Tombol ========== */
+        /* ========== COVER TEXT — HIGH CONTRAST ========== */
+        .cover-text-hero {
+            color: #FFF8DC;
+            text-shadow:
+                0 0 8px rgba(255,248,220,0.6),
+                0 0 25px rgba(212,175,55,0.5),
+                0 0 50px rgba(212,175,55,0.25),
+                0 2px 4px rgba(0,0,0,0.8);
+        }
+        .cover-text-label {
+            color: #FFF5CC;
+            text-shadow:
+                0 0 6px rgba(255,245,204,0.4),
+                0 0 18px rgba(212,175,55,0.35),
+                0 1px 3px rgba(0,0,0,0.7);
+        }
+        .cover-text-sub {
+            color: rgba(255,245,204,0.92);
+            text-shadow:
+                0 0 5px rgba(255,245,204,0.3),
+                0 1px 3px rgba(0,0,0,0.6);
+        }
+
         .btn-gold {
             background: linear-gradient(135deg, #B8960C, #D4AF37, #E8D48B, #D4AF37, #B8960C);
             background-size: 300% 300%;
             color: #022C22; font-weight: 700; border: none; cursor: pointer;
             transition: all .4s ease; position: relative; overflow: hidden;
+            text-shadow: none;
         }
         .btn-gold:hover { background-position:100% 100%; transform:translateY(-2px); box-shadow:0 8px 30px rgba(212,175,55,0.4); }
         .btn-gold:active { transform:translateY(0); }
@@ -341,7 +339,6 @@
         }
         .btn-gold-outline:hover { background:var(--accent); color:var(--kraton-dark); transform:translateY(-2px); box-shadow:0 4px 20px rgba(212,175,55,0.3); }
 
-        /* ========== Foto Profil ========== */
         .photo-frame {
             padding: 4px;
             background: linear-gradient(135deg, #B8960C, #D4AF37, #E8D48B, #D4AF37, #B8960C);
@@ -349,7 +346,6 @@
             box-shadow: 0 0 30px rgba(212,175,55,0.3);
         }
 
-        /* ========== Timeline ========== */
         .timeline-line {
             position: absolute; left: 50%; top: 0; bottom: 0; width: 2px;
             background: linear-gradient(180deg, transparent, var(--accent), transparent);
@@ -364,7 +360,6 @@
         }
         @media (max-width: 768px) { .timeline-dot { left: 20px; } }
 
-        /* ========== Galeri ========== */
         .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
         @media (max-width: 768px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 480px) { .gallery-grid { grid-template-columns: 1fr; } }
@@ -381,7 +376,6 @@
         .lightbox.active { display:flex; }
         .lightbox img { max-width:90vw; max-height:85vh; object-fit:contain; border:2px solid var(--accent); }
 
-        /* ========== Audio ========== */
         .audio-btn {
             width:50px; height:50px; border-radius:50%;
             background:linear-gradient(135deg,#B8960C,#D4AF37);
@@ -393,12 +387,10 @@
         .audio-btn:hover { transform:scale(1.1); box-shadow:0 6px 30px rgba(212,175,55,0.6); }
         .audio-btn.playing { animation:pulseGold 1.5s ease-in-out infinite; }
 
-        /* ========== Tab ========== */
         .tab-btn { transition:all .3s ease; cursor:pointer; border-bottom:2px solid transparent; padding-bottom:8px; background:none; border-top:none; border-left:none; border-right:none; }
         .tab-btn.active { color:var(--accent); border-bottom-color:var(--accent); }
         .tab-btn:hover { color:var(--accent); }
 
-        /* ========== Toast ========== */
         .toast {
             position:fixed; bottom:100px; left:50%;
             transform:translateX(-50%) translateY(20px);
@@ -409,7 +401,6 @@
         }
         .toast.show { opacity:1; transform:translateX(-50%) translateY(0); }
 
-        /* ========== Countdown ========== */
         .countdown-box {
             background:linear-gradient(135deg,rgba(6,78,59,0.92),rgba(2,44,34,0.96));
             border:2px solid var(--accent); border-radius:8px;
@@ -417,7 +408,6 @@
             box-shadow:0 4px 20px rgba(212,175,55,0.2);
         }
 
-        /* ========== RSVP Feed ========== */
         .rsvp-feed { max-height:400px; overflow-y:auto; scrollbar-width:thin; scrollbar-color:var(--accent) var(--ivory-dark); }
         .rsvp-feed::-webkit-scrollbar { width:4px; }
         .rsvp-feed::-webkit-scrollbar-track { background:var(--ivory-dark); border-radius:2px; }
@@ -459,8 +449,7 @@
 
     <!-- ==================== COVER ==================== -->
     <section id="coverSection" class="fixed inset-0 z-50 cover-bg cover-pattern flex items-center justify-center overflow-hidden">
-        <!-- Gunungan besar background -->
-        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[420px] opacity-[0.08] pointer-events-none">
+        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[400px] opacity-[0.07] pointer-events-none">
             <svg viewBox="0 0 200 280" fill="currentColor" class="w-full text-gold">
                 <path d="M100,8 C100,8 88,28 75,45 C62,62 48,55 50,72 C52,89 35,85 38,102 C41,119 22,118 28,138 C34,158 18,165 30,185 C42,205 38,225 52,242 C66,259 85,272 100,278 C115,272 134,259 148,242 C162,225 158,205 170,185 C182,165 166,158 172,138 C178,118 159,119 162,102 C165,85 148,89 150,72 C152,55 138,62 125,45 C112,28 100,8 100,8Z"/>
                 <ellipse cx="100" cy="148" rx="22" ry="28" opacity="0.3"/>
@@ -474,52 +463,61 @@
             </svg>
         </div>
 
-        <!-- Joglo kecil kiri-kanan di background -->
-        <div class="absolute bottom-0 left-2 w-24 opacity-[0.06] pointer-events-none">
-            <svg viewBox="0 0 400 220" fill="currentColor" class="w-full text-gold">
-                <path d="M200 8 L168 48 L172 52 L148 78 L152 82 L120 112 L124 116 L80 148 L84 152 L50 176 L50 195 L130 195 L130 210 L145 210 L145 195 L255 195 L255 210 L270 210 L270 195 L350 195 L350 176 L316 152 L320 148 L276 116 L280 112 L248 82 L252 78 L228 52 L232 48Z"/>
-                <rect x="130' y='195" width="15" height="15"/>
-                <rect x="255" y="195" width="15" height="15"/>
-                <rect x="80" y="148" width="4" height="47"/>
-                <rect x="316" y="148" width="4" height="47"/>
-            </svg>
-        </div>
-        <div class="absolute bottom-0 right-2 w-24 opacity-[0.06] pointer-events-none">
-            <svg viewBox="0 0 400 220" fill="currentColor" class="w-full text-gold">
-                <path d="M200 8 L168 48 L172 52 L148 78 L152 82 L120 112 L124 116 L80 148 L84 152 L50 176 L50 195 L130 195 L130 210 L145 210 L145 195 L255 195 L255 210 L270 210 L270 195 L350 195 L350 176 L316 152 L320 148 L276 116 L280 112 L248 82 L252 78 L228 52 L232 48Z"/>
-            </svg>
-        </div>
-
         <div class="absolute inset-4 sm:inset-8 md:inset-12 gold-frame-double rounded-sm pointer-events-none"></div>
         <div class="absolute inset-8 sm:inset-14 md:inset-20 border border-gold-light/30 rounded-sm pointer-events-none"></div>
 
-        <div class="relative z-10 text-center px-6 py-8 max-w-lg mx-auto">
+        <div class="relative z-10 text-center px-6 py-8 w-full max-w-lg mx-auto">
             <div class="javanese-divider mb-6">
-                <span class="dot"></span><span class="diamond"></span><span class="line w-16"></span><span class="diamond"></span><span class="dot"></span>
+                <span class="dot" style="background:#FFF5CC; box-shadow:0 0 6px rgba(255,245,204,0.5);"></span>
+                <span class="diamond" style="box-shadow:0 0 8px rgba(212,175,55,0.5);"></span>
+                <span class="line w-16" style="background:linear-gradient(90deg,transparent,rgba(255,245,204,0.5),transparent);"></span>
+                <span class="diamond" style="box-shadow:0 0 8px rgba(212,175,55,0.5);"></span>
+                <span class="dot" style="background:#FFF5CC; box-shadow:0 0 6px rgba(255,245,204,0.5);"></span>
             </div>
-            <p class="font-cormorant text-gold-light/80 text-lg sm:text-xl tracking-[0.3em] uppercase mb-2" style="animation:fadeIn 1s ease-out .2s both;">Sugeng Rawuh</p>
-            <p class="font-cormorant text-gold-light/60 text-sm tracking-[0.2em] italic mb-8" style="animation:fadeIn 1s ease-out .4s both;">Mawi Asih &amp; Rahayu</p>
 
-            <div class="ornament-corner ornament-sm gold-frame-double rounded-sm px-6 py-5 mb-8 bg-kraton-dark/60 backdrop-blur-sm" style="animation:scaleIn .8s ease-out .6s both;">
-                <div class="corner-bl"></div><div class="corner-br"></div>
-                <p class="font-cormorant text-gold-light/70 text-xs tracking-[0.15em] uppercase mb-2">Katur Dhumateng</p>
-                <p class="font-cormorant text-gold text-lg sm:text-xl font-semibold leading-tight" id="guestNameDisplay">Bapak / Ibu / Saudara / i</p>
+            <p class="font-cormorant text-xl sm:text-2xl tracking-[0.3em] uppercase mb-2 cover-text-label" style="animation:fadeIn 1s ease-out .2s both;">
+                Sugeng Rawuh
+            </p>
+            <p class="font-cormorant text-sm tracking-[0.2em] italic mb-8 cover-text-sub" style="animation:fadeIn 1s ease-out .4s both;">
+                Mawi Asih &amp; Rahayu
+            </p>
+
+            <div class="ornament-corner ornament-sm gold-frame-double rounded-sm px-6 py-5 mb-8 bg-kraton-dark/70 backdrop-blur-sm mx-auto max-w-sm" style="animation:scaleIn .8s ease-out .6s both;">
+                <div class="corner-bl"></div>
+                <div class="corner-br"></div>
+                <p class="font-cormorant text-xs tracking-[0.15em] uppercase mb-2 cover-text-sub">Katur Dhumateng</p>
+                <p class="font-cormorant text-lg sm:text-xl font-semibold leading-tight cover-text-hero" id="guestNameDisplay">
+                    Bapak / Ibu / Saudara / i
+                </p>
             </div>
 
             <div class="mb-8" style="animation:fadeInUp .8s ease-out .8s both;">
-                <h1 class="font-cinzel text-gold text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-1">Mawi Asih</h1>
-                <p class="font-cormorant text-gold-light/60 text-2xl italic my-2">&amp;</p>
-                <h1 class="font-cinzel text-gold text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">Rahayu</h1>
+                <h1 class="font-cinzel text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-1 cover-text-hero">
+                    Mawi Asih
+                </h1>
+                <p class="font-cormorant text-2xl italic my-2 cover-text-sub">&amp;</p>
+                <h1 class="font-cinzel text-3xl sm:text-4xl md:text-5xl font-bold leading-tight cover-text-hero">
+                    Rahayu
+                </h1>
             </div>
-            <p class="font-cormorant text-gold-light/70 text-base sm:text-lg tracking-wider mb-10" style="animation:fadeIn 1s ease-out 1s both;">28 Desember 2025</p>
+
+            <p class="font-cormorant text-base sm:text-lg tracking-wider mb-10 cover-text-label" style="animation:fadeIn 1s ease-out 1s both;">
+                28 Desember 2025
+            </p>
 
             <div style="animation:fadeInUp .8s ease-out 1.2s both;">
                 <button id="openInvitation" class="btn-gold px-8 py-4 rounded-full text-sm sm:text-base tracking-wider uppercase animate-pulse-gold font-jakarta">
-                    <i class="fas fa-envelope-open-text mr-2"></i> Buka Undangan
+                    <i class="fas fa-envelope-open-text mr-2"></i>
+                    Buka Undangan
                 </button>
             </div>
+
             <div class="javanese-divider mt-8">
-                <span class="dot"></span><span class="diamond"></span><span class="line w-16"></span><span class="diamond"></span><span class="dot"></span>
+                <span class="dot" style="background:#FFF5CC; box-shadow:0 0 6px rgba(255,245,204,0.5);"></span>
+                <span class="diamond" style="box-shadow:0 0 8px rgba(212,175,55,0.5);"></span>
+                <span class="line w-16" style="background:linear-gradient(90deg,transparent,rgba(255,245,204,0.5),transparent);"></span>
+                <span class="diamond" style="box-shadow:0 0 8px rgba(212,175,55,0.5);"></span>
+                <span class="dot" style="background:#FFF5CC; box-shadow:0 0 6px rgba(255,245,204,0.5);"></span>
             </div>
         </div>
     </section>
@@ -527,21 +525,18 @@
     <!-- ==================== MAIN ==================== -->
     <main id="mainContent" class="opacity-0 transition-opacity duration-1000">
 
-        <!-- ===== JOGLO DIVIDER BESAR pembuka ===== -->
         <div class="joglo-divider-lg bg-kraton-dark">
             <div class="jd-line"></div>
             <span class="jd-dot"></span>
-            <div class="jd-icon">
-                <svg viewBox="0 0 400 220" fill="currentColor" class="w-full h-full">
-                    <path d="M200 8 L168 48 L172 52 L148 78 L152 82 L120 112 L124 116 L80 148 L84 152 L50 176 L50 195 L130 195 L130 210 L145 210 L145 195 L255 195 L255 210 L270 210 L270 195 L350 195 L350 176 L316 152 L320 148 L276 116 L280 112 L248 82 L252 78 L228 52 L232 48Z"/>
-                    <rect x="130" y="195" width="15" height="15"/>
-                    <rect x="255" y="195" width="15" height="15"/>
-                    <rect x="80" y="148" width="4" height="47" opacity="0.6"/>
-                    <rect x="316" y="148" width="4" height="47" opacity="0.6"/>
-                    <rect x="120" y="112" width="3" height="36" opacity="0.3"/>
-                    <rect x="277" y="112" width="3" height="36" opacity="0.3"/>
-                </svg>
-            </div>
+            <svg class="jd-icon" viewBox="0 0 400 220" fill="currentColor">
+                <path d="M200 8 L168 48 L172 52 L148 78 L152 82 L120 112 L124 116 L80 148 L84 152 L50 176 L50 195 L130 195 L130 210 L145 210 L145 195 L255 195 L255 210 L270 210 L270 195 L350 195 L350 176 L316 152 L320 148 L276 116 L280 112 L248 82 L252 78 L228 52 L232 48Z"/>
+                <rect x="130" y="195" width="15" height="15"/>
+                <rect x="255" y="195" width="15" height="15"/>
+                <rect x="80" y="148" width="4" height="47" opacity="0.6"/>
+                <rect x="316" y="148" width="4" height="47" opacity="0.6"/>
+                <rect x="120" y="112" width="3" height="36" opacity="0.3"/>
+                <rect x="277" y="112" width="3" height="36" opacity="0.3"/>
+            </svg>
             <span class="jd-dot"></span>
             <div class="jd-line"></div>
         </div>
@@ -570,17 +565,10 @@
             </div>
         </section>
 
-        <!-- ===== JOGLO DIVIDER ===== -->
         <div class="joglo-divider section-warm-parang">
             <div class="jd-line"></div>
             <span class="jd-dot"></span>
-            <div class="jd-icon">
-                <svg viewBox="0 0 400 220" fill="currentColor" class="w-full h-full">
-                    <path d="M200 8 L168 48 L172 52 L148 78 L152 82 L120 112 L124 116 L80 148 L84 152 L50 176 L50 195 L130 195 L130 210 L145 210 L145 195 L255 195 L255 210 L270 210 L270 195 L350 195 L350 176 L316 152 L320 148 L276 116 L280 112 L248 82 L252 78 L228 52 L232 48Z"/>
-                    <rect x="130" y="195" width="15" height="15"/>
-                    <rect x="255" y="195" width="15" height="15"/>
-                </svg>
-            </div>
+            <svg class="jd-icon" viewBox="0 0 400 220" fill="currentColor"><path d="M200 8 L168 48 L172 52 L148 78 L152 82 L120 112 L124 116 L80 148 L84 152 L50 176 L50 195 L130 195 L130 210 L145 210 L145 195 L255 195 L255 210 L270 210 L270 195 L350 195 L350 176 L316 152 L320 148 L276 116 L280 112 L248 82 L252 78 L228 52 L232 48Z"/><rect x="130" y="195" width="15" height="15"/><rect x="255" y="195" width="15" height="15"/></svg>
             <span class="jd-dot"></span>
             <div class="jd-line"></div>
         </div>
@@ -626,13 +614,10 @@
             </div>
         </section>
 
-        <!-- ===== GUNUNGAN DIVIDER ===== -->
         <div class="gunungan-divider section-cream-kawung">
             <div class="gun-line"></div>
             <span class="gun-dot"></span>
-            <div class="gun-icon">
-                <svg viewBox="0 0 200 280" fill="currentColor" class="w-full h-full"><path d="M100,8 C100,8 88,28 75,45 C62,62 48,55 50,72 C52,89 35,85 38,102 C41,119 22,118 28,138 C34,158 18,165 30,185 C42,205 38,225 52,242 C66,259 85,272 100,278 C115,272 134,259 148,242 C162,225 158,205 170,185 C182,165 166,158 172,138 C178,118 159,119 162,102 C165,85 148,89 150,72 C152,55 138,62 125,45 C112,28 100,8 100,8Z"/><circle cx="100" cy="6" r="4"/></svg>
-            </div>
+            <svg class="gun-icon" viewBox="0 0 200 280" fill="currentColor"><path d="M100,8 C100,8 88,28 75,45 C62,62 48,55 50,72 C52,89 35,85 38,102 C41,119 22,118 28,138 C34,158 18,165 30,185 C42,205 38,225 52,242 C66,259 85,272 100,278 C115,272 134,259 148,242 C162,225 158,205 170,185 C182,165 166,158 172,138 C178,118 159,119 162,102 C165,85 148,89 150,72 C152,55 138,62 125,45 C112,28 100,8 100,8Z"/><circle cx="100" cy="6" r="4"/></svg>
             <span class="gun-dot"></span>
             <div class="gun-line"></div>
         </div>
@@ -692,32 +677,27 @@
             </div>
         </section>
 
-        <!-- ===== JOGLO DIVIDER ===== -->
         <div class="joglo-divider section-warm-parang">
-            <div class="jd-line"></div>
-            <span class="jd-dot"></span>
-            <div class="jd-icon">
-                <svg viewBox="0 0 400 220" fill="currentColor" class="w-full h-full"><path d="M200 8 L168 48 L172 52 L148 78 L152 82 L120 112 L124 116 L80 148 L84 152 L50 176 L50 195 L130 195 L130 210 L145 210 L145 195 L255 195 L255 210 L270 210 L270 195 L350 195 L350 176 L316 152 L320 148 L276 116 L280 112 L248 82 L252 78 L228 52 L232 48Z"/><rect x="130" y="195" width="15" height="15"/><rect x="255" y="195" width="15" height="15"/></svg>
-            </div>
-            <span class="jd-dot"></span>
-            <div class="jd-line"></div>
+            <div class="jd-line"></div><span class="jd-dot"></span>
+            <svg class="jd-icon" viewBox="0 0 400 220" fill="currentColor"><path d="M200 8 L168 48 L172 52 L148 78 L152 82 L120 112 L124 116 L80 148 L84 152 L50 176 L50 195 L130 195 L130 210 L145 210 L145 195 L255 195 L255 210 L270 210 L270 195 L350 195 L350 176 L316 152 L320 148 L276 116 L280 112 L248 82 L252 78 L228 52 L232 48Z"/><rect x="130" y="195" width="15" height="15"/><rect x="255" y="195" width="15" height="15"/></svg>
+            <span class="jd-dot"></span><div class="jd-line"></div>
         </div>
 
         <!-- ==================== VIDEO ==================== -->
         <section class="py-16 sm:py-24 px-4 section-dark-parang relative overflow-hidden">
-            <div class="absolute inset-0 opacity-[0.05] pointer-events-none">
-                <svg viewBox="0 0 400 220" fill="currentColor" class="w-full h-full text-gold"><path d="M200 8 L168 48 L172 52 L148 78 L152 82 L120 112 L124 116 L80 148 L84 152 L50 176 L50 195 L130 195 L130 210 L145 210 L145 195 L255 195 L255 210 L270 210 L270 195 L350 195 L350 176 L316 152 L320 148 L276 116 L280 112 L248 82 L252 78 L228 52 L232 48Z"/></svg>
+            <div class="absolute inset-0 opacity-[0.05] pointer-events-none flex items-center justify-center">
+                <svg viewBox="0 0 400 220" fill="currentColor" class="w-[60%] h-auto text-gold"><path d="M200 8 L168 48 L172 52 L148 78 L152 82 L120 112 L124 116 L80 148 L84 152 L50 176 L50 195 L130 195 L130 210 L145 210 L145 195 L255 195 L255 210 L270 210 L270 195 L350 195 L350 176 L316 152 L320 148 L276 116 L280 112 L248 82 L252 78 L228 52 L232 48Z"/></svg>
             </div>
             <div class="max-w-3xl mx-auto relative z-10">
                 <div class="text-center mb-10 reveal">
-                    <p class="font-cormorant text-gold-light/60 text-xs tracking-[0.25em] uppercase mb-2">Dokumentasi</p>
+                    <p class="font-cormorant text-gold-light/70 text-xs tracking-[0.25em] uppercase mb-2">Dokumentasi</p>
                     <h2 class="font-cinzel text-gold text-2xl sm:text-3xl font-bold mb-4">Video Prewedding</h2>
                     <div class="javanese-divider max-w-xs mx-auto">
-                        <span class="dot" style="background:rgba(232,212,139,0.5);"></span>
-                        <span class="line w-8" style="background:linear-gradient(90deg,transparent,rgba(232,212,139,0.4),transparent);"></span>
-                        <span class="diamond" style="background:rgba(232,212,139,0.5);"></span>
-                        <span class="line w-8" style="background:linear-gradient(90deg,transparent,rgba(232,212,139,0.4),transparent);"></span>
-                        <span class="dot" style="background:rgba(232,212,139,0.5);"></span>
+                        <span class="dot" style="background:rgba(232,212,139,0.6);"></span>
+                        <span class="line w-8" style="background:linear-gradient(90deg,transparent,rgba(232,212,139,0.5),transparent);"></span>
+                        <span class="diamond" style="background:rgba(232,212,139,0.6);"></span>
+                        <span class="line w-8" style="background:linear-gradient(90deg,transparent,rgba(232,212,139,0.5),transparent);"></span>
+                        <span class="dot" style="background:rgba(232,212,139,0.6);"></span>
                     </div>
                 </div>
                 <div class="reveal-scale">
@@ -729,15 +709,12 @@
             </div>
         </section>
 
-        <!-- ===== GUNUNGAN DIVIDER ===== -->
         <div class="gunungan-divider section-dark-parang">
-            <div class="gun-line" style="background:linear-gradient(90deg,transparent 0%,rgba(212,175,55,0.06) 20%,rgba(212,175,55,0.3) 50%,rgba(212,175,55,0.06) 80%,transparent 100%);"></div>
-            <span class="gun-dot"></span>
-            <div class="gun-icon" style="opacity:0.18;">
-                <svg viewBox="0 0 200 280" fill="currentColor" class="w-full h-full"><path d="M100,8 C100,8 88,28 75,45 C62,62 48,55 50,72 C52,89 35,85 38,102 C41,119 22,118 28,138 C34,158 18,165 30,185 C42,205 38,225 52,242 C66,259 85,272 100,278 C115,272 134,259 148,242 C162,225 158,205 170,185 C182,165 166,158 172,138 C178,118 159,119 162,102 C165,85 148,89 150,72 C152,55 138,62 125,45 C112,28 100,8 100,8Z"/><circle cx="100" cy="6" r="4"/></svg>
-            </div>
-            <span class="gun-dot"></span>
-            <div class="gun-line" style="background:linear-gradient(90deg,transparent 0%,rgba(212,175,55,0.06) 20%,rgba(212,175,55,0.3) 50%,rgba(212,175,55,0.06) 80%,transparent 100%);"></div>
+            <div class="gun-line" style="background:linear-gradient(90deg,transparent 0%,rgba(212,175,55,0.06) 20%,rgba(212,175,55,0.35) 50%,rgba(212,175,55,0.06) 80%,transparent 100%);"></div>
+            <span class="gun-dot" style="opacity:0.6;"></span>
+            <svg class="gun-icon" viewBox="0 0 200 280" fill="currentColor" style="opacity:0.2;"><path d="M100,8 C100,8 88,28 75,45 C62,62 48,55 50,72 C52,89 35,85 38,102 C41,119 22,118 28,138 C34,158 18,165 30,185 C42,205 38,225 52,242 C66,259 85,272 100,278 C115,272 134,259 148,242 C162,225 158,205 170,185 C182,165 166,158 172,138 C178,118 159,119 162,102 C165,85 148,89 150,72 C152,55 138,62 125,45 C112,28 100,8 100,8Z"/><circle cx="100" cy="6" r="4"/></svg>
+            <span class="gun-dot" style="opacity:0.6;"></span>
+            <div class="gun-line" style="background:linear-gradient(90deg,transparent 0%,rgba(212,175,55,0.06) 20%,rgba(212,175,55,0.35) 50%,rgba(212,175,55,0.06) 80%,transparent 100%);"></div>
         </div>
 
         <!-- ==================== DETAIL ACARA ==================== -->
@@ -750,7 +727,6 @@
                         <span class="dot"></span><span class="line w-8"></span><span class="diamond"></span><span class="line w-8"></span><span class="dot"></span>
                     </div>
                 </div>
-
                 <div class="grid md:grid-cols-2 gap-8 mb-14">
                     <div class="reveal-left">
                         <div class="ornament-corner gold-frame-double rounded-sm bg-white/80 backdrop-blur-sm p-8 text-center h-full gold-shadow">
@@ -783,12 +759,10 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Countdown -->
                 <div class="reveal mb-14">
                     <div class="ornament-corner gold-frame-double rounded-sm bg-kraton p-8 sm:p-10 gold-shadow-strong">
                         <div class="corner-bl"></div><div class="corner-br"></div>
-                        <p class="font-cormorant text-gold-light/60 text-xs tracking-[0.25em] uppercase text-center mb-6">Mundur tumuju Dina Bahagia</p>
+                        <p class="font-cormorant text-gold-light/70 text-xs tracking-[0.25em] uppercase text-center mb-6">Mundur tumuju Dina Bahagia</p>
                         <div class="flex justify-center gap-3 sm:gap-5" id="countdownContainer">
                             <div class="countdown-box"><span id="countDays" class="font-cinzel text-gold text-2xl sm:text-4xl font-bold block">00</span><span class="font-jakarta text-gold-light/60 text-[10px] sm:text-xs uppercase tracking-wider">Hari</span></div>
                             <div class="countdown-box"><span id="countHours" class="font-cinzel text-gold text-2xl sm:text-4xl font-bold block">00</span><span class="font-jakarta text-gold-light/60 text-[10px] sm:text-xs uppercase tracking-wider">Jam</span></div>
@@ -797,8 +771,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Maps -->
                 <div class="reveal-scale">
                     <div class="ornament-corner gold-frame-double rounded-sm overflow-hidden gold-shadow-strong">
                         <div class="corner-bl"></div><div class="corner-br"></div>
@@ -811,15 +783,10 @@
             </div>
         </section>
 
-        <!-- ===== JOGLO DIVIDER ===== -->
         <div class="joglo-divider section-cream-kawung">
-            <div class="jd-line"></div>
-            <span class="jd-dot"></span>
-            <div class="jd-icon">
-                <svg viewBox="0 0 400 220" fill="currentColor" class="w-full h-full"><path d="M200 8 L168 48 L172 52 L148 78 L152 82 L120 112 L124 116 L80 148 L84 152 L50 176 L50 195 L130 195 L130 210 L145 210 L145 195 L255 195 L255 210 L270 210 L270 195 L350 195 L350 176 L316 152 L320 148 L276 116 L280 112 L248 82 L252 78 L228 52 L232 48Z"/><rect x="130" y="195" width="15" height="15"/><rect x="255" y="195" width="15" height="15"/></svg>
-            </div>
-            <span class="jd-dot"></span>
-            <div class="jd-line"></div>
+            <div class="jd-line"></div><span class="jd-dot"></span>
+            <svg class="jd-icon" viewBox="0 0 400 220" fill="currentColor"><path d="M200 8 L168 48 L172 52 L148 78 L152 82 L120 112 L124 116 L80 148 L84 152 L50 176 L50 195 L130 195 L130 210 L145 210 L145 195 L255 195 L255 210 L270 210 L270 195 L350 195 L350 176 L316 152 L320 148 L276 116 L280 112 L248 82 L252 78 L228 52 L232 48Z"/><rect x="130" y="195" width="15" height="15"/><rect x="255" y="195" width="15" height="15"/></svg>
+            <span class="jd-dot"></span><div class="jd-line"></div>
         </div>
 
         <!-- ==================== GALERI ==================== -->
@@ -846,15 +813,10 @@
             </div>
         </section>
 
-        <!-- ===== GUNUNGAN DIVIDER ===== -->
         <div class="gunungan-divider section-warm-parang">
-            <div class="gun-line"></div>
-            <span class="gun-dot"></span>
-            <div class="gun-icon">
-                <svg viewBox="0 0 200 280" fill="currentColor" class="w-full h-full"><path d="M100,8 C100,8 88,28 75,45 C62,62 48,55 50,72 C52,89 35,85 38,102 C41,119 22,118 28,138 C34,158 18,165 30,185 C42,205 38,225 52,242 C66,259 85,272 100,278 C115,272 134,259 148,242 C162,225 158,205 170,185 C182,165 166,158 172,138 C178,118 159,119 162,102 C165,85 148,89 150,72 C152,55 138,62 125,45 C112,28 100,8 100,8Z"/><circle cx="100" cy="6" r="4"/></svg>
-            </div>
-            <span class="gun-dot"></span>
-            <div class="gun-line"></div>
+            <div class="gun-line"></div><span class="gun-dot"></span>
+            <svg class="gun-icon" viewBox="0 0 200 280" fill="currentColor"><path d="M100,8 C100,8 88,28 75,45 C62,62 48,55 50,72 C52,89 35,85 38,102 C41,119 22,118 28,138 C34,158 18,165 30,185 C42,205 38,225 52,242 C66,259 85,272 100,278 C115,272 134,259 148,242 C162,225 158,205 170,185 C182,165 166,158 172,138 C178,118 159,119 162,102 C165,85 148,89 150,72 C152,55 138,62 125,45 C112,28 100,8 100,8Z"/><circle cx="100" cy="6" r="4"/></svg>
+            <span class="gun-dot"></span><div class="gun-line"></div>
         </div>
 
         <!-- ==================== AMPLOP DIGITAL ==================== -->
@@ -893,15 +855,10 @@
             </div>
         </section>
 
-        <!-- ===== JOGLO DIVIDER ===== -->
         <div class="joglo-divider section-cream-kawung">
-            <div class="jd-line"></div>
-            <span class="jd-dot"></span>
-            <div class="jd-icon">
-                <svg viewBox="0 0 400 220" fill="currentColor" class="w-full h-full"><path d="M200 8 L168 48 L172 52 L148 78 L152 82 L120 112 L124 116 L80 148 L84 152 L50 176 L50 195 L130 195 L130 210 L145 210 L145 195 L255 195 L255 210 L270 210 L270 195 L350 195 L350 176 L316 152 L320 148 L276 116 L280 112 L248 82 L252 78 L228 52 L232 48Z"/><rect x="130" y="195" width="15" height="15"/><rect x="255" y="195" width="15" height="15"/></svg>
-            </div>
-            <span class="jd-dot"></span>
-            <div class="jd-line"></div>
+            <div class="jd-line"></div><span class="jd-dot"></span>
+            <svg class="jd-icon" viewBox="0 0 400 220" fill="currentColor"><path d="M200 8 L168 48 L172 52 L148 78 L152 82 L120 112 L124 116 L80 148 L84 152 L50 176 L50 195 L130 195 L130 210 L145 210 L145 195 L255 195 L255 210 L270 210 L270 195 L350 195 L350 176 L316 152 L320 148 L276 116 L280 112 L248 82 L252 78 L228 52 L232 48Z"/><rect x="130" y="195" width="15" height="15"/><rect x="255" y="195" width="15" height="15"/></svg>
+            <span class="jd-dot"></span><div class="jd-line"></div>
         </div>
 
         <!-- ==================== RSVP ==================== -->
@@ -919,10 +876,7 @@
                     <div class="ornament-corner gold-frame-double rounded-sm bg-white/80 backdrop-blur-sm p-8 sm:p-10 gold-shadow">
                         <div class="corner-bl"></div><div class="corner-br"></div>
                         <form id="rsvpForm" onsubmit="handleRSVP(event)" class="space-y-5">
-                            <div>
-                                <label class="font-cormorant text-kraton text-sm font-semibold block mb-2">Asma Tamu</label>
-                                <input type="text" id="rsvpName" class="input-jawa" placeholder="Mlebetaken asma panjenengan..." required>
-                            </div>
+                            <div><label class="font-cormorant text-kraton text-sm font-semibold block mb-2">Asma Tamu</label><input type="text" id="rsvpName" class="input-jawa" placeholder="Mlebetaken asma panjenengan..." required></div>
                             <div>
                                 <label class="font-cormorant text-kraton text-sm font-semibold block mb-2">Konfirmasi Kehadiran</label>
                                 <div class="flex gap-4">
@@ -930,16 +884,8 @@
                                     <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="attendance" value="Tidak Hadir" class="accent-[#D4AF37] w-4 h-4"><span class="font-jakarta text-sm text-charcoal">Mboten Saged Hadir</span></label>
                                 </div>
                             </div>
-                            <div>
-                                <label class="font-cormorant text-kraton text-sm font-semibold block mb-2">Jumlah Tamu</label>
-                                <select id="rsvpGuests" class="input-jawa">
-                                    <option value="1">1 Orang</option><option value="2">2 Orang</option><option value="3">3 Orang</option><option value="4">4 Orang</option><option value="5">5 Orang</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label class="font-cormorant text-kraton text-sm font-semibold block mb-2">Ucapan &amp; Doa</label>
-                                <textarea id="rsvpMessage" class="input-jawa" rows="3" placeholder="Sekedhik ucapan lan doa kangge mempelai..."></textarea>
-                            </div>
+                            <div><label class="font-cormorant text-kraton text-sm font-semibold block mb-2">Jumlah Tamu</label><select id="rsvpGuests" class="input-jawa"><option value="1">1 Orang</option><option value="2">2 Orang</option><option value="3">3 Orang</option><option value="4">4 Orang</option><option value="5">5 Orang</option></select></div>
+                            <div><label class="font-cormorant text-kraton text-sm font-semibold block mb-2">Ucapan &amp; Doa</label><textarea id="rsvpMessage" class="input-jawa" rows="3" placeholder="Sekedhik ucapan lan doa kangge mempelai..."></textarea></div>
                             <button type="submit" class="btn-gold w-full py-3 rounded-full text-sm tracking-wider uppercase font-jakarta"><i class="fas fa-paper-plane mr-2"></i> Kirim Konfirmasi</button>
                         </form>
                     </div>
@@ -949,75 +895,48 @@
                         <div class="corner-bl"></div><div class="corner-br"></div>
                         <p class="font-cormorant text-gold-dark text-xs tracking-[0.15em] uppercase text-center mb-4">Konfirmasi saking Tamu</p>
                         <div class="rsvp-feed" id="rsvpFeed">
-                            <div class="wish-card">
-                                <div class="flex items-center gap-2 mb-2">
-                                    <div class="w-8 h-8 rounded-full bg-kraton/10 flex items-center justify-center"><i class="fas fa-user text-gold text-xs"></i></div>
-                                    <div><p class="font-jakarta text-charcoal text-sm font-semibold">Budi Santoso</p><p class="font-jakarta text-muted text-[10px]">Hadir - 2 Orang</p></div>
-                                </div>
-                                <p class="font-jakarta text-muted text-xs italic leading-relaxed">"Mugi parenga kebahagiaan, sakinah mawaddah warahmah."</p>
-                            </div>
-                            <div class="wish-card">
-                                <div class="flex items-center gap-2 mb-2">
-                                    <div class="w-8 h-8 rounded-full bg-kraton/10 flex items-center justify-center"><i class="fas fa-user text-gold text-xs"></i></div>
-                                    <div><p class="font-jakarta text-charcoal text-sm font-semibold">Siti Aminah</p><p class="font-jakarta text-muted text-[10px]">Hadir - 1 Orang</p></div>
-                                </div>
-                                <p class="font-jakarta text-muted text-xs italic leading-relaxed">"Samoga langgeng salawase, dinten lan wengi."</p>
-                            </div>
+                            <div class="wish-card"><div class="flex items-center gap-2 mb-2"><div class="w-8 h-8 rounded-full bg-kraton/10 flex items-center justify-center"><i class="fas fa-user text-gold text-xs"></i></div><div><p class="font-jakarta text-charcoal text-sm font-semibold">Budi Santoso</p><p class="font-jakarta text-muted text-[10px]">Hadir - 2 Orang</p></div></div><p class="font-jakarta text-muted text-xs italic leading-relaxed">"Mugi parenga kebahagiaan, sakinah mawaddah warahmah."</p></div>
+                            <div class="wish-card"><div class="flex items-center gap-2 mb-2"><div class="w-8 h-8 rounded-full bg-kraton/10 flex items-center justify-center"><i class="fas fa-user text-gold text-xs"></i></div><div><p class="font-jakarta text-charcoal text-sm font-semibold">Siti Aminah</p><p class="font-jakarta text-muted text-[10px]">Hadir - 1 Orang</p></div></div><p class="font-jakarta text-muted text-xs italic leading-relaxed">"Samoga langgeng salawase, dinten lan wengi."</p></div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ===== JOGLO DIVIDER BESAR penutup ===== -->
-        <div class="joglo-divider-lg section-warm-parang">
-            <div class="jd-line"></div>
-            <span class="jd-dot"></span>
-            <div class="jd-icon">
-                <svg viewBox="0 0 400 220" fill="currentColor" class="w-full h-full">
-                    <path d="M200 8 L168 48 L172 52 L148 78 L152 82 L120 112 L124 116 L80 148 L84 152 L50 176 L50 195 L130 195 L130 210 L145 210 L145 195 L255 195 L255 210 L270 210 L270 195 L350 195 L350 176 L316 152 L320 148 L276 116 L280 112 L248 82 L252 78 L228 52 L232 48Z"/>
-                    <rect x="130" y="195" width="15" height="15"/>
-                    <rect x="255" y="195" width="15" height="15"/>
-                    <rect x="80" y="148" width="4" height="47" opacity="0.6"/>
-                    <rect x="316" y="148" width="4" height="47" opacity="0.6"/>
-                </svg>
-            </div>
-            <span class="jd-dot"></span>
-            <div class="jd-line"></div>
+        <div class="joglo-divider-lg section-warm-parang flex items-center justify-center">
+            <div class="jd-line"></div><span class="jd-dot"></span>
+            <svg class="jd-icon mx-auto" viewBox="0 0 400 220" fill="currentColor"><path d="M200 8 L168 48 L172 52 L148 78 L152 82 L120 112 L124 116 L80 148 L84 152 L50 176 L50 195 L130 195 L130 210 L145 210 L145 195 L255 195 L255 210 L270 210 L270 195 L350 195 L350 176 L316 152 L320 148 L276 116 L280 112 L248 82 L252 78 L228 52 L232 48Z"/><rect x="130" y="195" width="15" height="15"/><rect x="255" y="195" width="15" height="15"/><rect x="80" y="148" width="4" height="47" opacity="0.6"/><rect x="316" y="148" width="4" height="47" opacity="0.6"/></svg>
+            <span class="jd-dot"></span><div class="jd-line"></div>
         </div>
 
         <!-- ==================== FOOTER ==================== -->
         <footer class="py-16 sm:py-24 px-4 section-dark-parang relative overflow-hidden">
-            <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[280px] opacity-[0.06] pointer-events-none">
-                <svg viewBox="0 0 200 280" fill="currentColor" class="w-full text-gold">
-                    <path d="M100,8 C100,8 88,28 75,45 C62,62 48,55 50,72 C52,89 35,85 38,102 C41,119 22,118 28,138 C34,158 18,165 30,185 C42,205 38,225 52,242 C66,259 85,272 100,278 C115,272 134,259 148,242 C162,225 158,205 170,185 C182,165 166,158 172,138 C178,118 159,119 162,102 C165,85 148,89 150,72 C152,55 138,62 125,45 C112,28 100,8 100,8Z"/>
-                    <circle cx="100" cy="6" r="4"/>
-                </svg>
+            <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[250px] opacity-[0.06] pointer-events-none">
+                <svg viewBox="0 0 200 280" fill="currentColor" class="w-full text-gold"><path d="M100,8 C100,8 88,28 75,45 C62,62 48,55 50,72 C52,89 35,85 38,102 C41,119 22,118 28,138 C34,158 18,165 30,185 C42,205 38,225 52,242 C66,259 85,272 100,278 C115,272 134,259 148,242 C162,225 158,205 170,185 C182,165 166,158 172,138 C178,118 159,119 162,102 C165,85 148,89 150,72 C152,55 138,62 125,45 C112,28 100,8 100,8Z"/><circle cx="100" cy="6" r="4"/></svg>
             </div>
-
             <div class="max-w-2xl mx-auto relative z-10 text-center">
                 <div class="reveal-scale">
                     <div class="ornament-corner gold-frame-double rounded-sm bg-kraton-dark/80 backdrop-blur-sm p-10 sm:p-14 gold-shadow-strong">
                         <div class="corner-bl"></div><div class="corner-br"></div>
                         <div class="javanese-divider mb-8">
-                            <span class="dot" style="background:rgba(232,212,139,0.5);"></span>
-                            <span class="line w-12" style="background:linear-gradient(90deg,transparent,rgba(232,212,139,0.4),transparent);"></span>
-                            <span class="diamond" style="background:rgba(232,212,139,0.5);"></span>
-                            <span class="line w-12" style="background:linear-gradient(90deg,transparent,rgba(232,212,139,0.4),transparent);"></span>
-                            <span class="dot" style="background:rgba(232,212,139,0.5);"></span>
+                            <span class="dot" style="background:rgba(232,212,139,0.6);"></span>
+                            <span class="line w-12" style="background:linear-gradient(90deg,transparent,rgba(232,212,139,0.5),transparent);"></span>
+                            <span class="diamond" style="background:rgba(232,212,139,0.6);"></span>
+                            <span class="line w-12" style="background:linear-gradient(90deg,transparent,rgba(232,212,139,0.5),transparent);"></span>
+                            <span class="dot" style="background:rgba(232,212,139,0.6);"></span>
                         </div>
-                        <p class="font-cormorant text-gold-light/60 text-xs tracking-[0.3em] uppercase mb-4">Matur Nuwun</p>
+                        <p class="font-cormorant text-gold-light/70 text-xs tracking-[0.3em] uppercase mb-4">Matur Nuwun</p>
                         <h2 class="font-cinzel text-gold text-2xl sm:text-3xl font-bold mb-6">Terima Kasih</h2>
-                        <p class="font-jakarta text-gold-light/70 text-sm leading-relaxed mb-4 max-w-md mx-auto">Atas kehadiran dan doa restu yang diberikan, kami mengucapkan terima kasih yang sebesar-besarnya. Mugi kebahagiaan ini menjadi berkah bagi kita semua.</p>
-                        <p class="font-cormorant text-gold-light/50 text-sm italic mb-8">"Matur nuwun santun panjenengan sedaya."</p>
+                        <p class="font-jakarta text-gold-light/80 text-sm leading-relaxed mb-4 max-w-md mx-auto">Atas kehadiran dan doa restu yang diberikan, kami mengucapkan terima kasih yang sebesar-besarnya. Mugi kebahagiaan ini menjadi berkah bagi kita semua.</p>
+                        <p class="font-cormorant text-gold-light/60 text-sm italic mb-8">"Matur nuwun santun panjenengan sedaya."</p>
                         <p class="font-cinzel text-gold text-xl sm:text-2xl font-bold mb-1">Mawi Asih &amp; Rahayu</p>
-                        <p class="font-cormorant text-gold-light/50 text-sm">28 Desember 2025</p>
+                        <p class="font-cormorant text-gold-light/60 text-sm">28 Desember 2025</p>
                         <div class="javanese-divider mt-8">
-                            <span class="dot" style="background:rgba(232,212,139,0.5);"></span>
-                            <span class="line w-12" style="background:linear-gradient(90deg,transparent,rgba(232,212,139,0.4),transparent);"></span>
-                            <span class="diamond" style="background:rgba(232,212,139,0.5);"></span>
-                            <span class="line w-12" style="background:linear-gradient(90deg,transparent,rgba(232,212,139,0.4),transparent);"></span>
-                            <span class="dot" style="background:rgba(232,212,139,0.5);"></span>
+                            <span class="dot" style="background:rgba(232,212,139,0.6);"></span>
+                            <span class="line w-12" style="background:linear-gradient(90deg,transparent,rgba(232,212,139,0.5),transparent);"></span>
+                            <span class="diamond" style="background:rgba(232,212,139,0.6);"></span>
+                            <span class="line w-12" style="background:linear-gradient(90deg,transparent,rgba(232,212,139,0.5),transparent);"></span>
+                            <span class="dot" style="background:rgba(232,212,139,0.6);"></span>
                         </div>
                     </div>
                 </div>
@@ -1027,7 +946,7 @@
 
     </main>
 
-    <!-- ==================== JAVASCRIPT (TIDAK DIUBAH) ==================== -->
+    <!-- ==================== JAVASCRIPT ==================== -->
     <script>
         (function() {
             var params = new URLSearchParams(window.location.search);
