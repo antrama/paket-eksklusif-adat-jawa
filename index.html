@@ -300,7 +300,6 @@
             background-size: 44px 88px, 80px 80px, 80px 80px;
         }
 
-        /* ========== COVER TEXT — HIGH CONTRAST ========== */
         .cover-text-hero {
             color: #FFF8DC;
             text-shadow:
@@ -448,17 +447,12 @@
     </div>
 
     <!-- ==================== COVER ==================== -->
-    <section id="coverSection" class="fixed inset-0 z-50 cover-bg cover-pattern flex items-center justify-center overflow-hidden">
+    <section id="coverSection" class="fixed inset-0 z-50 cover-bg cover-pattern overflow-hidden">
         <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[400px] opacity-[0.07] pointer-events-none">
             <svg viewBox="0 0 200 280" fill="currentColor" class="w-full text-gold">
                 <path d="M100,8 C100,8 88,28 75,45 C62,62 48,55 50,72 C52,89 35,85 38,102 C41,119 22,118 28,138 C34,158 18,165 30,185 C42,205 38,225 52,242 C66,259 85,272 100,278 C115,272 134,259 148,242 C162,225 158,205 170,185 C182,165 166,158 172,138 C178,118 159,119 162,102 C165,85 148,89 150,72 C152,55 138,62 125,45 C112,28 100,8 100,8Z"/>
                 <ellipse cx="100" cy="148" rx="22" ry="28" opacity="0.3"/>
-                <ellipse cx="90" cy="140" rx="5" ry="3" opacity="0.5"/>
-                <ellipse cx="110" cy="140" rx="5" ry="3" opacity="0.5"/>
-                <path d="M100,144 L97,154 L103,154Z" opacity="0.4"/>
-                <path d="M92,162 Q100,168 108,162" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.4"/>
                 <circle cx="100" cy="6" r="4" opacity="0.7"/>
-                <path d="M100,10 L95,28 L100,18 L105,28Z" opacity="0.5"/>
                 <rect x="70" y="265" width="60" height="12" rx="3" opacity="0.5"/>
             </svg>
         </div>
@@ -466,23 +460,24 @@
         <div class="absolute inset-4 sm:inset-8 md:inset-12 gold-frame-double rounded-sm pointer-events-none"></div>
         <div class="absolute inset-8 sm:inset-14 md:inset-20 border border-gold-light/30 rounded-sm pointer-events-none"></div>
 
-        <div class="relative z-10 text-center px-6 py-8 w-full max-w-lg mx-auto">
-            <div class="javanese-divider mb-6">
-                <span class="dot" style="background:#FFF5CC; box-shadow:0 0 6px rgba(255,245,204,0.5);"></span>
-                <span class="diamond" style="box-shadow:0 0 8px rgba(212,175,55,0.5);"></span>
-                <span class="line w-16" style="background:linear-gradient(90deg,transparent,rgba(255,245,204,0.5),transparent);"></span>
-                <span class="diamond" style="box-shadow:0 0 8px rgba(212,175,55,0.5);"></span>
-                <span class="dot" style="background:#FFF5CC; box-shadow:0 0 6px rgba(255,245,204,0.5);"></span>
+        <!-- KONTEN COVER: absolute centering untuk posisi tepat di tengah -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-center px-6 py-4 w-full max-w-lg">
+
+            <!-- Oval krem + teks hitam: SUGENG RAWUH -->
+            <div class="relative inline-block mb-7" style="animation:fadeIn 1s ease-out .2s both;">
+                <div class="absolute inset-0 -inset-x-10 -inset-y-4 bg-ivory rounded-[50%]" style="box-shadow: 0 4px 30px rgba(0,0,0,0.3), inset 0 0 15px rgba(212,175,55,0.08);"></div>
+                <div class="relative py-3 px-6">
+                    <p class="font-cormorant text-lg sm:text-xl tracking-[0.3em] uppercase mb-1" style="color:#18181B;">
+                        Sugeng Rawuh
+                    </p>
+                    <p class="font-cormorant text-sm tracking-[0.2em] italic" style="color:rgba(24,24,27,0.65);">
+                        Mawi Asih &amp; Rahayu
+                    </p>
+                </div>
             </div>
 
-            <p class="font-cormorant text-xl sm:text-2xl tracking-[0.3em] uppercase mb-2 cover-text-label" style="animation:fadeIn 1s ease-out .2s both;">
-                Sugeng Rawuh
-            </p>
-            <p class="font-cormorant text-sm tracking-[0.2em] italic mb-8 cover-text-sub" style="animation:fadeIn 1s ease-out .4s both;">
-                Mawi Asih &amp; Rahayu
-            </p>
-
-            <div class="ornament-corner ornament-sm gold-frame-double rounded-sm px-6 py-5 mb-8 bg-kraton-dark/70 backdrop-blur-sm mx-auto max-w-sm" style="animation:scaleIn .8s ease-out .6s both;">
+            <!-- Kotak Nama Tamu -->
+            <div class="ornament-corner ornament-sm gold-frame-double rounded-sm px-6 py-5 mb-7 bg-kraton-dark/70 backdrop-blur-sm mx-auto max-w-sm" style="animation:scaleIn .8s ease-out .5s both;">
                 <div class="corner-bl"></div>
                 <div class="corner-br"></div>
                 <p class="font-cormorant text-xs tracking-[0.15em] uppercase mb-2 cover-text-sub">Katur Dhumateng</p>
@@ -491,7 +486,8 @@
                 </p>
             </div>
 
-            <div class="mb-8" style="animation:fadeInUp .8s ease-out .8s both;">
+            <!-- Nama Mempelai -->
+            <div class="mb-7" style="animation:fadeInUp .8s ease-out .7s both;">
                 <h1 class="font-cinzel text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-1 cover-text-hero">
                     Mawi Asih
                 </h1>
@@ -501,23 +497,17 @@
                 </h1>
             </div>
 
-            <p class="font-cormorant text-base sm:text-lg tracking-wider mb-10 cover-text-label" style="animation:fadeIn 1s ease-out 1s both;">
+            <!-- Tanggal -->
+            <p class="font-cormorant text-base sm:text-lg tracking-wider mb-8 cover-text-label" style="animation:fadeIn 1s ease-out .9s both;">
                 28 Desember 2025
             </p>
 
-            <div style="animation:fadeInUp .8s ease-out 1.2s both;">
+            <!-- Tombol -->
+            <div style="animation:fadeInUp .8s ease-out 1.1s both;">
                 <button id="openInvitation" class="btn-gold px-8 py-4 rounded-full text-sm sm:text-base tracking-wider uppercase animate-pulse-gold font-jakarta">
                     <i class="fas fa-envelope-open-text mr-2"></i>
                     Buka Undangan
                 </button>
-            </div>
-
-            <div class="javanese-divider mt-8">
-                <span class="dot" style="background:#FFF5CC; box-shadow:0 0 6px rgba(255,245,204,0.5);"></span>
-                <span class="diamond" style="box-shadow:0 0 8px rgba(212,175,55,0.5);"></span>
-                <span class="line w-16" style="background:linear-gradient(90deg,transparent,rgba(255,245,204,0.5),transparent);"></span>
-                <span class="diamond" style="box-shadow:0 0 8px rgba(212,175,55,0.5);"></span>
-                <span class="dot" style="background:#FFF5CC; box-shadow:0 0 6px rgba(255,245,204,0.5);"></span>
             </div>
         </div>
     </section>
@@ -528,15 +518,7 @@
         <div class="joglo-divider-lg bg-kraton-dark">
             <div class="jd-line"></div>
             <span class="jd-dot"></span>
-            <svg class="jd-icon" viewBox="0 0 400 220" fill="currentColor">
-                <path d="M200 8 L168 48 L172 52 L148 78 L152 82 L120 112 L124 116 L80 148 L84 152 L50 176 L50 195 L130 195 L130 210 L145 210 L145 195 L255 195 L255 210 L270 210 L270 195 L350 195 L350 176 L316 152 L320 148 L276 116 L280 112 L248 82 L252 78 L228 52 L232 48Z"/>
-                <rect x="130" y="195" width="15" height="15"/>
-                <rect x="255" y="195" width="15" height="15"/>
-                <rect x="80" y="148" width="4" height="47" opacity="0.6"/>
-                <rect x="316" y="148" width="4" height="47" opacity="0.6"/>
-                <rect x="120" y="112" width="3" height="36" opacity="0.3"/>
-                <rect x="277" y="112" width="3" height="36" opacity="0.3"/>
-            </svg>
+            <svg class="jd-icon" viewBox="0 0 400 220" fill="currentColor"><path d="M200 8 L168 48 L172 52 L148 78 L152 82 L120 112 L124 116 L80 148 L84 152 L50 176 L50 195 L130 195 L130 210 L145 210 L145 195 L255 195 L255 210 L270 210 L270 195 L350 195 L350 176 L316 152 L320 148 L276 116 L280 112 L248 82 L252 78 L228 52 L232 48Z"/><rect x="130" y="195" width="15" height="15"/><rect x="255" y="195" width="15" height="15"/><rect x="80" y="148" width="4" height="47" opacity="0.6"/><rect x="316" y="148" width="4" height="47" opacity="0.6"/><rect x="120" y="112" width="3" height="36" opacity="0.3"/><rect x="277" y="112" width="3" height="36" opacity="0.3"/></svg>
             <span class="jd-dot"></span>
             <div class="jd-line"></div>
         </div>
@@ -547,31 +529,17 @@
                 <div class="reveal-scale">
                     <div class="ornament-corner gold-frame-double rounded-sm bg-white/80 backdrop-blur-sm p-8 sm:p-12 text-center relative gold-shadow">
                         <div class="corner-bl"></div><div class="corner-br"></div>
-                        <div class="javanese-divider mb-6">
-                            <span class="dot"></span><span class="line w-12"></span><span class="diamond"></span><span class="line w-12"></span><span class="dot"></span>
-                        </div>
+                        <div class="javanese-divider mb-6"><span class="dot"></span><span class="line w-12"></span><span class="diamond"></span><span class="line w-12"></span><span class="dot"></span></div>
                         <p class="font-cormorant text-gold-dark text-xs tracking-[0.2em] uppercase mb-4">Falsafah Pernikahan Jawa</p>
-                        <blockquote class="font-cormorant text-charcoal text-lg sm:text-xl italic leading-relaxed mb-6">
-                            "Saka lemah lair ing bumi, saka banyu mili ing sagara, saka geni sumunar ing dunya, saka angin ngibing ing ndonya. Sakloron mantep ing dhateng pundi, mantep ing ati, mantep ing laku, mantep ing tekad."
-                        </blockquote>
-                        <p class="font-jakarta text-muted text-sm leading-relaxed">
-                            Seperti tanah yang menopang kehidupan, air yang mengalir ke lautan, api yang menyinari dunia, dan angin yang berhembus di muka bumi — demikianlah dua jiwa yang dipersatukan, saling menopang menuju kebahagiaan abadi.
-                        </p>
-                        <div class="javanese-divider mt-6">
-                            <span class="dot"></span><span class="line w-12"></span><span class="diamond"></span><span class="line w-12"></span><span class="dot"></span>
-                        </div>
+                        <blockquote class="font-cormorant text-charcoal text-lg sm:text-xl italic leading-relaxed mb-6">"Saka lemah lair ing bumi, saka banyu mili ing sagara, saka geni sumunar ing dunya, saka angin ngibing ing ndonya. Sakloron mantep ing dhateng pundi, mantep ing ati, mantep ing laku, mantep ing tekad."</blockquote>
+                        <p class="font-jakarta text-muted text-sm leading-relaxed">Seperti tanah yang menopang kehidupan, air yang mengalir ke lautan, api yang menyinari dunia, dan angin yang berhembus di muka bumi — demikianlah dua jiwa yang dipersatukan, saling menopang menuju kebahagiaan abadi.</p>
+                        <div class="javanese-divider mt-6"><span class="dot"></span><span class="line w-12"></span><span class="diamond"></span><span class="line w-12"></span><span class="dot"></span></div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <div class="joglo-divider section-warm-parang">
-            <div class="jd-line"></div>
-            <span class="jd-dot"></span>
-            <svg class="jd-icon" viewBox="0 0 400 220" fill="currentColor"><path d="M200 8 L168 48 L172 52 L148 78 L152 82 L120 112 L124 116 L80 148 L84 152 L50 176 L50 195 L130 195 L130 210 L145 210 L145 195 L255 195 L255 210 L270 210 L270 195 L350 195 L350 176 L316 152 L320 148 L276 116 L280 112 L248 82 L252 78 L228 52 L232 48Z"/><rect x="130" y="195" width="15" height="15"/><rect x="255" y="195" width="15" height="15"/></svg>
-            <span class="jd-dot"></span>
-            <div class="jd-line"></div>
-        </div>
+        <div class="joglo-divider section-warm-parang"><div class="jd-line"></div><span class="jd-dot"></span><svg class="jd-icon" viewBox="0 0 400 220" fill="currentColor"><path d="M200 8 L168 48 L172 52 L148 78 L152 82 L120 112 L124 116 L80 148 L84 152 L50 176 L50 195 L130 195 L130 210 L145 210 L145 195 L255 195 L255 210 L270 210 L270 195 L350 195 L350 176 L316 152 L320 148 L276 116 L280 112 L248 82 L252 78 L228 52 L232 48Z"/><rect x="130" y="195" width="15" height="15"/><rect x="255" y="195" width="15" height="15"/></svg><span class="jd-dot"></span><div class="jd-line"></div></div>
 
         <!-- ==================== MEMPELAI ==================== -->
         <section class="py-16 sm:py-24 px-4 section-cream-kawung">
@@ -579,17 +547,13 @@
                 <div class="text-center mb-12 reveal">
                     <p class="font-cormorant text-gold-dark text-xs tracking-[0.25em] uppercase mb-2">Ingkang Mbiyantu</p>
                     <h2 class="font-cinzel text-kraton text-2xl sm:text-3xl font-bold mb-4">Mempelai</h2>
-                    <div class="javanese-divider max-w-xs mx-auto">
-                        <span class="dot"></span><span class="line w-8"></span><span class="diamond"></span><span class="line w-8"></span><span class="dot"></span>
-                    </div>
+                    <div class="javanese-divider max-w-xs mx-auto"><span class="dot"></span><span class="line w-8"></span><span class="diamond"></span><span class="line w-8"></span><span class="dot"></span></div>
                 </div>
                 <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
                     <div class="text-center reveal-left">
                         <div class="ornament-corner gold-frame-double rounded-sm bg-white/80 backdrop-blur-sm p-8 gold-shadow">
                             <div class="corner-bl"></div><div class="corner-br"></div>
-                            <div class="photo-frame w-36 h-36 sm:w-44 sm:h-44 mx-auto mb-5">
-                                <img src="https://picsum.photos/seed/mempelai-pria-kraton/400/400.jpg" alt="Mempelai Pria - Mawi Asih" class="w-full h-full rounded-full object-cover">
-                            </div>
+                            <div class="photo-frame w-36 h-36 sm:w-44 sm:h-44 mx-auto mb-5"><img src="https://picsum.photos/seed/mempelai-pria-kraton/400/400.jpg" alt="Mempelai Pria - Mawi Asih" class="w-full h-full rounded-full object-cover"></div>
                             <p class="font-cormorant text-gold-dark text-xs tracking-[0.2em] uppercase mb-1">Mempelai Kakung</p>
                             <h3 class="font-cinzel text-kraton text-xl sm:text-2xl font-bold mb-2">Mawi Asih</h3>
                             <p class="font-jakarta text-muted text-sm mb-1">Putra kaping loro saking</p>
@@ -600,9 +564,7 @@
                     <div class="text-center reveal-right">
                         <div class="ornament-corner gold-frame-double rounded-sm bg-white/80 backdrop-blur-sm p-8 gold-shadow">
                             <div class="corner-bl"></div><div class="corner-br"></div>
-                            <div class="photo-frame w-36 h-36 sm:w-44 sm:h-44 mx-auto mb-5">
-                                <img src="https://picsum.photos/seed/mempelai-wanita-kraton/400/400.jpg" alt="Mempelai Wanita - Rahayu" class="w-full h-full rounded-full object-cover">
-                            </div>
+                            <div class="photo-frame w-36 h-36 sm:w-44 sm:h-44 mx-auto mb-5"><img src="https://picsum.photos/seed/mempelai-wanita-kraton/400/400.jpg" alt="Mempelai Wanita - Rahayu" class="w-full h-full rounded-full object-cover"></div>
                             <p class="font-cormorant text-gold-dark text-xs tracking-[0.2em] uppercase mb-1">Mempelai Putri</p>
                             <h3 class="font-cinzel text-kraton text-xl sm:text-2xl font-bold mb-2">Rahayu</h3>
                             <p class="font-jakarta text-muted text-sm mb-1">Putri kaping pisan saking</p>
@@ -614,13 +576,7 @@
             </div>
         </section>
 
-        <div class="gunungan-divider section-cream-kawung">
-            <div class="gun-line"></div>
-            <span class="gun-dot"></span>
-            <svg class="gun-icon" viewBox="0 0 200 280" fill="currentColor"><path d="M100,8 C100,8 88,28 75,45 C62,62 48,55 50,72 C52,89 35,85 38,102 C41,119 22,118 28,138 C34,158 18,165 30,185 C42,205 38,225 52,242 C66,259 85,272 100,278 C115,272 134,259 148,242 C162,225 158,205 170,185 C182,165 166,158 172,138 C178,118 159,119 162,102 C165,85 148,89 150,72 C152,55 138,62 125,45 C112,28 100,8 100,8Z"/><circle cx="100" cy="6" r="4"/></svg>
-            <span class="gun-dot"></span>
-            <div class="gun-line"></div>
-        </div>
+        <div class="gunungan-divider section-cream-kawung"><div class="gun-line"></div><span class="gun-dot"></span><svg class="gun-icon" viewBox="0 0 200 280" fill="currentColor"><path d="M100,8 C100,8 88,28 75,45 C62,62 48,55 50,72 C52,89 35,85 38,102 C41,119 22,118 28,138 C34,158 18,165 30,185 C42,205 38,225 52,242 C66,259 85,272 100,278 C115,272 134,259 148,242 C162,225 158,205 170,185 C182,165 166,158 172,138 C178,118 159,119 162,102 C165,85 148,89 150,72 C152,55 138,62 125,45 C112,28 100,8 100,8Z"/><circle cx="100" cy="6" r="4"/></svg><span class="gun-dot"></span><div class="gun-line"></div></div>
 
         <!-- ==================== TIMELINE ==================== -->
         <section class="py-16 sm:py-24 px-4 section-warm-parang joglo-watermark">
@@ -628,94 +584,33 @@
                 <div class="text-center mb-14 reveal">
                     <p class="font-cormorant text-gold-dark text-xs tracking-[0.25em] uppercase mb-2">Perjalanan Cinta</p>
                     <h2 class="font-cinzel text-kraton text-2xl sm:text-3xl font-bold mb-4">Pinanggih</h2>
-                    <div class="javanese-divider max-w-xs mx-auto">
-                        <span class="dot"></span><span class="line w-8"></span><span class="diamond"></span><span class="line w-8"></span><span class="dot"></span>
-                    </div>
+                    <div class="javanese-divider max-w-xs mx-auto"><span class="dot"></span><span class="line w-8"></span><span class="diamond"></span><span class="line w-8"></span><span class="dot"></span></div>
                 </div>
                 <div class="relative">
                     <div class="timeline-line"></div>
-                    <div class="relative mb-12 md:mb-16">
-                        <div class="timeline-dot" style="top:20px;"></div>
-                        <div class="md:w-5/12 md:ml-auto md:pl-8 pl-12">
-                            <div class="reveal-right">
-                                <div class="ornament-corner ornament-sm gold-frame rounded-sm bg-white/80 backdrop-blur-sm p-5 gold-shadow">
-                                    <div class="corner-bl"></div><div class="corner-br"></div>
-                                    <p class="font-cormorant text-gold text-xs tracking-[0.15em] uppercase mb-1">Maret 2023</p>
-                                    <h4 class="font-cinzel text-kraton text-lg font-bold mb-2">Awal Pinanggih</h4>
-                                    <p class="font-jakarta text-muted text-sm leading-relaxed">Kangge pertami pinanggih wonten ing adicara Seminar Nasional ing Yogyakarta. Saking mripat ingkang katemuhan, lajeng ati mboten saget dipunpundhut malih.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="relative mb-12 md:mb-16">
-                        <div class="timeline-dot" style="top:20px;"></div>
-                        <div class="md:w-5/12 md:mr-auto md:pr-8 pl-12 md:pl-0">
-                            <div class="reveal-left">
-                                <div class="ornament-corner ornament-sm gold-frame rounded-sm bg-white/80 backdrop-blur-sm p-5 gold-shadow">
-                                    <div class="corner-bl"></div><div class="corner-br"></div>
-                                    <p class="font-cormorant text-gold text-xs tracking-[0.15em] uppercase mb-1">Agustus 2024</p>
-                                    <h4 class="font-cinzel text-kraton text-lg font-bold mb-2">Lamaran / Khitbah</h4>
-                                    <p class="font-jakarta text-muted text-sm leading-relaxed">Kanthi lahir batin ingkang mantep, pinasti kangge nglaksanakaken lamaran kanthi prosesi adat Jawa ing omah tiyang sepuhipun. Kaluwarga saking kedawih pihak paring restu.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="relative">
-                        <div class="timeline-dot" style="top:20px;"></div>
-                        <div class="md:w-5/12 md:ml-auto md:pl-8 pl-12">
-                            <div class="reveal-right">
-                                <div class="ornament-corner ornament-sm gold-frame rounded-sm bg-white/80 backdrop-blur-sm p-5 gold-shadow">
-                                    <div class="corner-bl"></div><div class="corner-br"></div>
-                                    <p class="font-cormorant text-gold text-xs tracking-[0.15em] uppercase mb-1">Desember 2025</p>
-                                    <h4 class="font-cinzel text-kraton text-lg font-bold mb-2">Menuju Pelaminan</h4>
-                                    <p class="font-jakarta text-muted text-sm leading-relaxed">Sakloron siap nglaksanakaken gedhe-gedhean adicara pernikahan kanthi prosesi adat Kraton ingkang megah lan sakral. Mugi saget dados kulawarga sakinah mawaddah warahmah.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="relative mb-12 md:mb-16"><div class="timeline-dot" style="top:20px;"></div><div class="md:w-5/12 md:ml-auto md:pl-8 pl-12"><div class="reveal-right"><div class="ornament-corner ornament-sm gold-frame rounded-sm bg-white/80 backdrop-blur-sm p-5 gold-shadow"><div class="corner-bl"></div><div class="corner-br"></div><p class="font-cormorant text-gold text-xs tracking-[0.15em] uppercase mb-1">Maret 2023</p><h4 class="font-cinzel text-kraton text-lg font-bold mb-2">Awal Pinanggih</h4><p class="font-jakarta text-muted text-sm leading-relaxed">Kangge pertami pinanggih wonten ing adicara Seminar Nasional ing Yogyakarta. Saking mripat ingkang katemuhan, lajeng ati mboten saget dipunpundhut malih.</p></div></div></div></div></div>
+                    <div class="relative mb-12 md:mb-16"><div class="timeline-dot" style="top:20px;"></div><div class="md:w-5/12 md:mr-auto md:pr-8 pl-12 md:pl-0"><div class="reveal-left"><div class="ornament-corner ornament-sm gold-frame rounded-sm bg-white/80 backdrop-blur-sm p-5 gold-shadow"><div class="corner-bl"></div><div class="corner-br"></div><p class="font-cormorant text-gold text-xs tracking-[0.15em] uppercase mb-1">Agustus 2024</p><h4 class="font-cinzel text-kraton text-lg font-bold mb-2">Lamaran / Khitbah</h4><p class="font-jakarta text-muted text-sm leading-relaxed">Kanthi lahir batin ingkang mantep, pinasti kangge nglaksanakaken lamaran kanthi prosesi adat Jawa ing omah tiyang sepuhipun. Kaluwarga saking kedawih pihak paring restu.</p></div></div></div></div></div>
+                    <div class="relative"><div class="timeline-dot" style="top:20px;"></div><div class="md:w-5/12 md:ml-auto md:pl-8 pl-12"><div class="reveal-right"><div class="ornament-corner ornament-sm gold-frame rounded-sm bg-white/80 backdrop-blur-sm p-5 gold-shadow"><div class="corner-bl"></div><div class="corner-br"></div><p class="font-cormorant text-gold text-xs tracking-[0.15em] uppercase mb-1">Desember 2025</p><h4 class="font-cinzel text-kraton text-lg font-bold mb-2">Menuju Pelaminan</h4><p class="font-jakarta text-muted text-sm leading-relaxed">Sakloron siap nglaksanakaken gedhe-gedhean adicara pernikahan kanthi prosesi adat Kraton ingkang megah lan sakral. Mugi saget dados kulawarga sakinah mawaddah warahmah.</p></div></div></div></div></div>
                 </div>
             </div>
         </section>
 
-        <div class="joglo-divider section-warm-parang">
-            <div class="jd-line"></div><span class="jd-dot"></span>
-            <svg class="jd-icon" viewBox="0 0 400 220" fill="currentColor"><path d="M200 8 L168 48 L172 52 L148 78 L152 82 L120 112 L124 116 L80 148 L84 152 L50 176 L50 195 L130 195 L130 210 L145 210 L145 195 L255 195 L255 210 L270 210 L270 195 L350 195 L350 176 L316 152 L320 148 L276 116 L280 112 L248 82 L252 78 L228 52 L232 48Z"/><rect x="130" y="195" width="15" height="15"/><rect x="255" y="195" width="15" height="15"/></svg>
-            <span class="jd-dot"></span><div class="jd-line"></div>
-        </div>
+        <div class="joglo-divider section-warm-parang"><div class="jd-line"></div><span class="jd-dot"></span><svg class="jd-icon" viewBox="0 0 400 220" fill="currentColor"><path d="M200 8 L168 48 L172 52 L148 78 L152 82 L120 112 L124 116 L80 148 L84 152 L50 176 L50 195 L130 195 L130 210 L145 210 L145 195 L255 195 L255 210 L270 210 L270 195 L350 195 L350 176 L316 152 L320 148 L276 116 L280 112 L248 82 L252 78 L228 52 L232 48Z"/><rect x="130" y="195" width="15" height="15"/><rect x="255" y="195" width="15" height="15"/></svg><span class="jd-dot"></span><div class="jd-line"></div></div>
 
         <!-- ==================== VIDEO ==================== -->
         <section class="py-16 sm:py-24 px-4 section-dark-parang relative overflow-hidden">
-            <div class="absolute inset-0 opacity-[0.05] pointer-events-none flex items-center justify-center">
-                <svg viewBox="0 0 400 220" fill="currentColor" class="w-[60%] h-auto text-gold"><path d="M200 8 L168 48 L172 52 L148 78 L152 82 L120 112 L124 116 L80 148 L84 152 L50 176 L50 195 L130 195 L130 210 L145 210 L145 195 L255 195 L255 210 L270 210 L270 195 L350 195 L350 176 L316 152 L320 148 L276 116 L280 112 L248 82 L252 78 L228 52 L232 48Z"/></svg>
-            </div>
+            <div class="absolute inset-0 opacity-[0.05] pointer-events-none flex items-center justify-center"><svg viewBox="0 0 400 220" fill="currentColor" class="w-[60%] h-auto text-gold"><path d="M200 8 L168 48 L172 52 L148 78 L152 82 L120 112 L124 116 L80 148 L84 152 L50 176 L50 195 L130 195 L130 210 L145 210 L145 195 L255 195 L255 210 L270 210 L270 195 L350 195 L350 176 L316 152 L320 148 L276 116 L280 112 L248 82 L252 78 L228 52 L232 48Z"/></svg></div>
             <div class="max-w-3xl mx-auto relative z-10">
                 <div class="text-center mb-10 reveal">
                     <p class="font-cormorant text-gold-light/70 text-xs tracking-[0.25em] uppercase mb-2">Dokumentasi</p>
                     <h2 class="font-cinzel text-gold text-2xl sm:text-3xl font-bold mb-4">Video Prewedding</h2>
-                    <div class="javanese-divider max-w-xs mx-auto">
-                        <span class="dot" style="background:rgba(232,212,139,0.6);"></span>
-                        <span class="line w-8" style="background:linear-gradient(90deg,transparent,rgba(232,212,139,0.5),transparent);"></span>
-                        <span class="diamond" style="background:rgba(232,212,139,0.6);"></span>
-                        <span class="line w-8" style="background:linear-gradient(90deg,transparent,rgba(232,212,139,0.5),transparent);"></span>
-                        <span class="dot" style="background:rgba(232,212,139,0.6);"></span>
-                    </div>
+                    <div class="javanese-divider max-w-xs mx-auto"><span class="dot" style="background:rgba(232,212,139,0.6);"></span><span class="line w-8" style="background:linear-gradient(90deg,transparent,rgba(232,212,139,0.5),transparent);"></span><span class="diamond" style="background:rgba(232,212,139,0.6);"></span><span class="line w-8" style="background:linear-gradient(90deg,transparent,rgba(232,212,139,0.5),transparent);"></span><span class="dot" style="background:rgba(232,212,139,0.6);"></span></div>
                 </div>
-                <div class="reveal-scale">
-                    <div class="ornament-corner gold-frame-double rounded-sm overflow-hidden aspect-video gold-shadow-strong">
-                        <div class="corner-bl"></div><div class="corner-br"></div>
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video Prewedding Mawi Asih & Rahayu" class="w-full h-full" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                </div>
+                <div class="reveal-scale"><div class="ornament-corner gold-frame-double rounded-sm overflow-hidden aspect-video gold-shadow-strong"><div class="corner-bl"></div><div class="corner-br"></div><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video Prewedding Mawi Asih & Rahayu" class="w-full h-full" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
             </div>
         </section>
 
-        <div class="gunungan-divider section-dark-parang">
-            <div class="gun-line" style="background:linear-gradient(90deg,transparent 0%,rgba(212,175,55,0.06) 20%,rgba(212,175,55,0.35) 50%,rgba(212,175,55,0.06) 80%,transparent 100%);"></div>
-            <span class="gun-dot" style="opacity:0.6;"></span>
-            <svg class="gun-icon" viewBox="0 0 200 280" fill="currentColor" style="opacity:0.2;"><path d="M100,8 C100,8 88,28 75,45 C62,62 48,55 50,72 C52,89 35,85 38,102 C41,119 22,118 28,138 C34,158 18,165 30,185 C42,205 38,225 52,242 C66,259 85,272 100,278 C115,272 134,259 148,242 C162,225 158,205 170,185 C182,165 166,158 172,138 C178,118 159,119 162,102 C165,85 148,89 150,72 C152,55 138,62 125,45 C112,28 100,8 100,8Z"/><circle cx="100" cy="6" r="4"/></svg>
-            <span class="gun-dot" style="opacity:0.6;"></span>
-            <div class="gun-line" style="background:linear-gradient(90deg,transparent 0%,rgba(212,175,55,0.06) 20%,rgba(212,175,55,0.35) 50%,rgba(212,175,55,0.06) 80%,transparent 100%);"></div>
-        </div>
+        <div class="gunungan-divider section-dark-parang"><div class="gun-line" style="background:linear-gradient(90deg,transparent 0%,rgba(212,175,55,0.06) 20%,rgba(212,175,55,0.35) 50%,rgba(212,175,55,0.06) 80%,transparent 100%);"></div><span class="gun-dot" style="opacity:0.6;"></span><svg class="gun-icon" viewBox="0 0 200 280" fill="currentColor" style="opacity:0.2;"><path d="M100,8 C100,8 88,28 75,45 C62,62 48,55 50,72 C52,89 35,85 38,102 C41,119 22,118 28,138 C34,158 18,165 30,185 C42,205 38,225 52,242 C66,259 85,272 100,278 C115,272 134,259 148,242 C162,225 158,205 170,185 C182,165 166,158 172,138 C178,118 159,119 162,102 C165,85 148,89 150,72 C152,55 138,62 125,45 C112,28 100,8 100,8Z"/><circle cx="100" cy="6" r="4"/></svg><span class="gun-dot" style="opacity:0.6;"></span><div class="gun-line" style="background:linear-gradient(90deg,transparent 0%,rgba(212,175,55,0.06) 20%,rgba(212,175,55,0.35) 50%,rgba(212,175,55,0.06) 80%,transparent 100%);"></div></div>
 
         <!-- ==================== DETAIL ACARA ==================== -->
         <section class="py-16 sm:py-24 px-4 section-cream-kawung joglo-watermark">
@@ -723,71 +618,18 @@
                 <div class="text-center mb-14 reveal">
                     <p class="font-cormorant text-gold-dark text-xs tracking-[0.25em] uppercase mb-2">Wigli &amp; Papan</p>
                     <h2 class="font-cinzel text-kraton text-2xl sm:text-3xl font-bold mb-4">Detail Acara</h2>
-                    <div class="javanese-divider max-w-xs mx-auto">
-                        <span class="dot"></span><span class="line w-8"></span><span class="diamond"></span><span class="line w-8"></span><span class="dot"></span>
-                    </div>
+                    <div class="javanese-divider max-w-xs mx-auto"><span class="dot"></span><span class="line w-8"></span><span class="diamond"></span><span class="line w-8"></span><span class="dot"></span></div>
                 </div>
                 <div class="grid md:grid-cols-2 gap-8 mb-14">
-                    <div class="reveal-left">
-                        <div class="ornament-corner gold-frame-double rounded-sm bg-white/80 backdrop-blur-sm p-8 text-center h-full gold-shadow">
-                            <div class="corner-bl"></div><div class="corner-br"></div>
-                            <div class="w-14 h-14 mx-auto mb-4 rounded-full bg-kraton/10 flex items-center justify-center"><i class="fas fa-ring text-gold text-xl"></i></div>
-                            <h3 class="font-cinzel text-kraton text-xl font-bold mb-1">Akad Nikah</h3>
-                            <p class="font-cormorant text-gold-dark text-xs tracking-[0.15em] uppercase mb-5">Ijab Kabul</p>
-                            <div class="space-y-3 text-sm font-jakarta">
-                                <div class="flex items-center justify-center gap-2 text-charcoal"><i class="fas fa-calendar-alt text-gold text-xs"></i><span>Minggu, 28 Desember 2025</span></div>
-                                <div class="flex items-center justify-center gap-2 text-charcoal"><i class="fas fa-clock text-gold text-xs"></i><span>08.00 - 10.00 WIB</span></div>
-                                <div class="flex items-center justify-center gap-2 text-charcoal"><i class="fas fa-map-marker-alt text-gold text-xs"></i><span>Masjid Agung Kraton Yogyakarta</span></div>
-                                <p class="text-muted text-xs mt-2">Jl. Kauman, Yogyakarta, Daerah Istimewa Yogyakarta 55113</p>
-                            </div>
-                            <button onclick="openGoogleCalendar('Akad Nikah','20251228T080000','20251228T100000','Masjid Agung Kraton Yogyakarta')" class="btn-gold-outline inline-flex items-center gap-2 px-5 py-2 rounded-full text-xs tracking-wider uppercase mt-5 font-jakarta"><i class="fas fa-calendar-plus"></i> Simpan Kalender</button>
-                        </div>
-                    </div>
-                    <div class="reveal-right">
-                        <div class="ornament-corner gold-frame-double rounded-sm bg-white/80 backdrop-blur-sm p-8 text-center h-full gold-shadow">
-                            <div class="corner-bl"></div><div class="corner-br"></div>
-                            <div class="w-14 h-14 mx-auto mb-4 rounded-full bg-kraton/10 flex items-center justify-center"><i class="fas fa-glass-cheers text-gold text-xl"></i></div>
-                            <h3 class="font-cinzel text-kraton text-xl font-bold mb-1">Resepsi</h3>
-                            <p class="font-cormorant text-gold-dark text-xs tracking-[0.15em] uppercase mb-5">Walimatul Ursy</p>
-                            <div class="space-y-3 text-sm font-jakarta">
-                                <div class="flex items-center justify-center gap-2 text-charcoal"><i class="fas fa-calendar-alt text-gold text-xs"></i><span>Minggu, 28 Desember 2025</span></div>
-                                <div class="flex items-center justify-center gap-2 text-charcoal"><i class="fas fa-clock text-gold text-xs"></i><span>11.00 - 14.00 WIB</span></div>
-                                <div class="flex items-center justify-center gap-2 text-charcoal"><i class="fas fa-map-marker-alt text-gold text-xs"></i><span>Pendopo Agung Ndalem Kraton</span></div>
-                                <p class="text-muted text-xs mt-2">Jl. Rotowijayan 1, Yogyakarta, DIY 55131</p>
-                            </div>
-                            <button onclick="openGoogleCalendar('Resepsi Pernikahan','20251228T110000','20251228T140000','Pendopo Agung Ndalem Kraton Yogyakarta')" class="btn-gold-outline inline-flex items-center gap-2 px-5 py-2 rounded-full text-xs tracking-wider uppercase mt-5 font-jakarta"><i class="fas fa-calendar-plus"></i> Simpan Kalender</button>
-                        </div>
-                    </div>
+                    <div class="reveal-left"><div class="ornament-corner gold-frame-double rounded-sm bg-white/80 backdrop-blur-sm p-8 text-center h-full gold-shadow"><div class="corner-bl"></div><div class="corner-br"></div><div class="w-14 h-14 mx-auto mb-4 rounded-full bg-kraton/10 flex items-center justify-center"><i class="fas fa-ring text-gold text-xl"></i></div><h3 class="font-cinzel text-kraton text-xl font-bold mb-1">Akad Nikah</h3><p class="font-cormorant text-gold-dark text-xs tracking-[0.15em] uppercase mb-5">Ijab Kabul</p><div class="space-y-3 text-sm font-jakarta"><div class="flex items-center justify-center gap-2 text-charcoal"><i class="fas fa-calendar-alt text-gold text-xs"></i><span>Minggu, 28 Desember 2025</span></div><div class="flex items-center justify-center gap-2 text-charcoal"><i class="fas fa-clock text-gold text-xs"></i><span>08.00 - 10.00 WIB</span></div><div class="flex items-center justify-center gap-2 text-charcoal"><i class="fas fa-map-marker-alt text-gold text-xs"></i><span>Masjid Agung Kraton Yogyakarta</span></div><p class="text-muted text-xs mt-2">Jl. Kauman, Yogyakarta, Daerah Istimewa Yogyakarta 55113</p></div><button onclick="openGoogleCalendar('Akad Nikah','20251228T080000','20251228T100000','Masjid Agung Kraton Yogyakarta')" class="btn-gold-outline inline-flex items-center gap-2 px-5 py-2 rounded-full text-xs tracking-wider uppercase mt-5 font-jakarta"><i class="fas fa-calendar-plus"></i> Simpan Kalender</button></div></div>
+                    <div class="reveal-right"><div class="ornament-corner gold-frame-double rounded-sm bg-white/80 backdrop-blur-sm p-8 text-center h-full gold-shadow"><div class="corner-bl"></div><div class="corner-br"></div><div class="w-14 h-14 mx-auto mb-4 rounded-full bg-kraton/10 flex items-center justify-center"><i class="fas fa-glass-cheers text-gold text-xl"></i></div><h3 class="font-cinzel text-kraton text-xl font-bold mb-1">Resepsi</h3><p class="font-cormorant text-gold-dark text-xs tracking-[0.15em] uppercase mb-5">Walimatul Ursy</p><div class="space-y-3 text-sm font-jakarta"><div class="flex items-center justify-center gap-2 text-charcoal"><i class="fas fa-calendar-alt text-gold text-xs"></i><span>Minggu, 28 Desember 2025</span></div><div class="flex items-center justify-center gap-2 text-charcoal"><i class="fas fa-clock text-gold text-xs"></i><span>11.00 - 14.00 WIB</span></div><div class="flex items-center justify-center gap-2 text-charcoal"><i class="fas fa-map-marker-alt text-gold text-xs"></i><span>Pendopo Agung Ndalem Kraton</span></div><p class="text-muted text-xs mt-2">Jl. Rotowijayan 1, Yogyakarta, DIY 55131</p></div><button onclick="openGoogleCalendar('Resepsi Pernikahan','20251228T110000','20251228T140000','Pendopo Agung Ndalem Kraton Yogyakarta')" class="btn-gold-outline inline-flex items-center gap-2 px-5 py-2 rounded-full text-xs tracking-wider uppercase mt-5 font-jakarta"><i class="fas fa-calendar-plus"></i> Simpan Kalender</button></div></div>
                 </div>
-                <div class="reveal mb-14">
-                    <div class="ornament-corner gold-frame-double rounded-sm bg-kraton p-8 sm:p-10 gold-shadow-strong">
-                        <div class="corner-bl"></div><div class="corner-br"></div>
-                        <p class="font-cormorant text-gold-light/70 text-xs tracking-[0.25em] uppercase text-center mb-6">Mundur tumuju Dina Bahagia</p>
-                        <div class="flex justify-center gap-3 sm:gap-5" id="countdownContainer">
-                            <div class="countdown-box"><span id="countDays" class="font-cinzel text-gold text-2xl sm:text-4xl font-bold block">00</span><span class="font-jakarta text-gold-light/60 text-[10px] sm:text-xs uppercase tracking-wider">Hari</span></div>
-                            <div class="countdown-box"><span id="countHours" class="font-cinzel text-gold text-2xl sm:text-4xl font-bold block">00</span><span class="font-jakarta text-gold-light/60 text-[10px] sm:text-xs uppercase tracking-wider">Jam</span></div>
-                            <div class="countdown-box"><span id="countMinutes" class="font-cinzel text-gold text-2xl sm:text-4xl font-bold block">00</span><span class="font-jakarta text-gold-light/60 text-[10px] sm:text-xs uppercase tracking-wider">Menit</span></div>
-                            <div class="countdown-box"><span id="countSeconds" class="font-cinzel text-gold text-2xl sm:text-4xl font-bold block">00</span><span class="font-jakarta text-gold-light/60 text-[10px] sm:text-xs uppercase tracking-wider">Detik</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="reveal-scale">
-                    <div class="ornament-corner gold-frame-double rounded-sm overflow-hidden gold-shadow-strong">
-                        <div class="corner-bl"></div><div class="corner-br"></div>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.088335492488!2d110.3639558!3d-7.8052548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a571f0e3c8d85%3A0x91e85e9a0a64e4b4!2sMasjid%20Agung%20Keraton%20Yogyakarta!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Lokasi Acara"></iframe>
-                        <div class="bg-white p-4 text-center">
-                            <a href="https://www.google.com/maps/place/Masjid+Agung+Keraton+Yogyakarta" target="_blank" rel="noopener noreferrer" class="btn-gold inline-flex items-center gap-2 px-6 py-3 rounded-full text-xs tracking-wider uppercase font-jakarta"><i class="fas fa-directions"></i> Buka di Google Maps</a>
-                        </div>
-                    </div>
-                </div>
+                <div class="reveal mb-14"><div class="ornament-corner gold-frame-double rounded-sm bg-kraton p-8 sm:p-10 gold-shadow-strong"><div class="corner-bl"></div><div class="corner-br"></div><p class="font-cormorant text-gold-light/70 text-xs tracking-[0.25em] uppercase text-center mb-6">Mundur tumuju Dina Bahagia</p><div class="flex justify-center gap-3 sm:gap-5" id="countdownContainer"><div class="countdown-box"><span id="countDays" class="font-cinzel text-gold text-2xl sm:text-4xl font-bold block">00</span><span class="font-jakarta text-gold-light/60 text-[10px] sm:text-xs uppercase tracking-wider">Hari</span></div><div class="countdown-box"><span id="countHours" class="font-cinzel text-gold text-2xl sm:text-4xl font-bold block">00</span><span class="font-jakarta text-gold-light/60 text-[10px] sm:text-xs uppercase tracking-wider">Jam</span></div><div class="countdown-box"><span id="countMinutes" class="font-cinzel text-gold text-2xl sm:text-4xl font-bold block">00</span><span class="font-jakarta text-gold-light/60 text-[10px] sm:text-xs uppercase tracking-wider">Menit</span></div><div class="countdown-box"><span id="countSeconds" class="font-cinzel text-gold text-2xl sm:text-4xl font-bold block">00</span><span class="font-jakarta text-gold-light/60 text-[10px] sm:text-xs uppercase tracking-wider">Detik</span></div></div></div></div>
+                <div class="reveal-scale"><div class="ornament-corner gold-frame-double rounded-sm overflow-hidden gold-shadow-strong"><div class="corner-bl"></div><div class="corner-br"></div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.088335492488!2d110.3639558!3d-7.8052548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a571f0e3c8d85%3A0x91e85e9a0a64e4b4!2sMasjid%20Agung%20Keraton%20Yogyakarta!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Lokasi Acara"></iframe><div class="bg-white p-4 text-center"><a href="https://www.google.com/maps/place/Masjid+Agung+Keraton+Yogyakarta" target="_blank" rel="noopener noreferrer" class="btn-gold inline-flex items-center gap-2 px-6 py-3 rounded-full text-xs tracking-wider uppercase font-jakarta"><i class="fas fa-directions"></i> Buka di Google Maps</a></div></div></div>
             </div>
         </section>
 
-        <div class="joglo-divider section-cream-kawung">
-            <div class="jd-line"></div><span class="jd-dot"></span>
-            <svg class="jd-icon" viewBox="0 0 400 220" fill="currentColor"><path d="M200 8 L168 48 L172 52 L148 78 L152 82 L120 112 L124 116 L80 148 L84 152 L50 176 L50 195 L130 195 L130 210 L145 210 L145 195 L255 195 L255 210 L270 210 L270 195 L350 195 L350 176 L316 152 L320 148 L276 116 L280 112 L248 82 L252 78 L228 52 L232 48Z"/><rect x="130" y="195" width="15" height="15"/><rect x="255" y="195" width="15" height="15"/></svg>
-            <span class="jd-dot"></span><div class="jd-line"></div>
-        </div>
+        <div class="joglo-divider section-cream-kawung"><div class="jd-line"></div><span class="jd-dot"></span><svg class="jd-icon" viewBox="0 0 400 220" fill="currentColor"><path d="M200 8 L168 48 L172 52 L148 78 L152 82 L120 112 L124 116 L80 148 L84 152 L50 176 L50 195 L130 195 L130 210 L145 210 L145 195 L255 195 L255 210 L270 210 L270 195 L350 195 L350 176 L316 152 L320 148 L276 116 L280 112 L248 82 L252 78 L228 52 L232 48Z"/><rect x="130" y="195" width="15" height="15"/><rect x="255" y="195" width="15" height="15"/></svg><span class="jd-dot"></span><div class="jd-line"></div></div>
 
         <!-- ==================== GALERI ==================== -->
         <section class="py-16 sm:py-24 px-4 section-warm-parang">
@@ -795,9 +637,7 @@
                 <div class="text-center mb-12 reveal">
                     <p class="font-cormorant text-gold-dark text-xs tracking-[0.25em] uppercase mb-2">Galeri</p>
                     <h2 class="font-cinzel text-kraton text-2xl sm:text-3xl font-bold mb-4">Momen Prewedding</h2>
-                    <div class="javanese-divider max-w-xs mx-auto">
-                        <span class="dot"></span><span class="line w-8"></span><span class="diamond"></span><span class="line w-8"></span><span class="dot"></span>
-                    </div>
+                    <div class="javanese-divider max-w-xs mx-auto"><span class="dot"></span><span class="line w-8"></span><span class="diamond"></span><span class="line w-8"></span><span class="dot"></span></div>
                 </div>
                 <div class="gallery-grid reveal-scale">
                     <div class="gallery-item tall" onclick="openLightbox(this)"><img src="https://picsum.photos/seed/pw-kraton-1/600/900.jpg" alt="Foto Prewedding 1" loading="lazy"></div>
@@ -813,11 +653,7 @@
             </div>
         </section>
 
-        <div class="gunungan-divider section-warm-parang">
-            <div class="gun-line"></div><span class="gun-dot"></span>
-            <svg class="gun-icon" viewBox="0 0 200 280" fill="currentColor"><path d="M100,8 C100,8 88,28 75,45 C62,62 48,55 50,72 C52,89 35,85 38,102 C41,119 22,118 28,138 C34,158 18,165 30,185 C42,205 38,225 52,242 C66,259 85,272 100,278 C115,272 134,259 148,242 C162,225 158,205 170,185 C182,165 166,158 172,138 C178,118 159,119 162,102 C165,85 148,89 150,72 C152,55 138,62 125,45 C112,28 100,8 100,8Z"/><circle cx="100" cy="6" r="4"/></svg>
-            <span class="gun-dot"></span><div class="gun-line"></div>
-        </div>
+        <div class="gunungan-divider section-warm-parang"><div class="gun-line"></div><span class="gun-dot"></span><svg class="gun-icon" viewBox="0 0 200 280" fill="currentColor"><path d="M100,8 C100,8 88,28 75,45 C62,62 48,55 50,72 C52,89 35,85 38,102 C41,119 22,118 28,138 C34,158 18,165 30,185 C42,205 38,225 52,242 C66,259 85,272 100,278 C115,272 134,259 148,242 C162,225 158,205 170,185 C182,165 166,158 172,138 C178,118 159,119 162,102 C165,85 148,89 150,72 C152,55 138,62 125,45 C112,28 100,8 100,8Z"/><circle cx="100" cy="6" r="4"/></svg><span class="gun-dot"></span><div class="gun-line"></div></div>
 
         <!-- ==================== AMPLOP DIGITAL ==================== -->
         <section class="py-16 sm:py-24 px-4 section-cream-kawung joglo-watermark">
@@ -825,41 +661,17 @@
                 <div class="text-center mb-12 reveal">
                     <p class="font-cormorant text-gold-dark text-xs tracking-[0.25em] uppercase mb-2">Tanda Kasih</p>
                     <h2 class="font-cinzel text-kraton text-2xl sm:text-3xl font-bold mb-4">Amplop Digital</h2>
-                    <div class="javanese-divider max-w-xs mx-auto">
-                        <span class="dot"></span><span class="line w-8"></span><span class="diamond"></span><span class="line w-8"></span><span class="dot"></span>
-                    </div>
+                    <div class="javanese-divider max-w-xs mx-auto"><span class="dot"></span><span class="line w-8"></span><span class="diamond"></span><span class="line w-8"></span><span class="dot"></span></div>
                     <p class="font-jakarta text-muted text-sm mt-4 max-w-md mx-auto leading-relaxed">Tanpa mengurangi rasa hormat, bagi Anda yang ingin memberikan tanda kasih dapat melalui amplop digital berikut.</p>
                 </div>
                 <div class="grid sm:grid-cols-2 gap-6">
-                    <div class="reveal-left">
-                        <div class="ornament-corner ornament-sm gold-frame rounded-sm bg-white/80 backdrop-blur-sm p-6 text-center gold-shadow">
-                            <div class="corner-bl"></div><div class="corner-br"></div>
-                            <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-kraton/10 flex items-center justify-center"><i class="fas fa-building-columns text-gold text-lg"></i></div>
-                            <p class="font-cormorant text-gold-dark text-xs tracking-[0.15em] uppercase mb-1">Bank Central Asia</p>
-                            <p class="font-jakarta text-charcoal text-lg font-bold mb-1 tracking-wider" id="bank1Number">1234567890</p>
-                            <p class="font-jakarta text-muted text-xs mb-3">a.n. Mawi Asih</p>
-                            <button onclick="copyToClipboard('1234567890')" class="btn-gold-outline inline-flex items-center gap-2 px-4 py-2 rounded-full text-[11px] tracking-wider uppercase font-jakarta"><i class="fas fa-copy"></i> Salin</button>
-                        </div>
-                    </div>
-                    <div class="reveal-right">
-                        <div class="ornament-corner ornament-sm gold-frame rounded-sm bg-white/80 backdrop-blur-sm p-6 text-center gold-shadow">
-                            <div class="corner-bl"></div><div class="corner-br"></div>
-                            <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-kraton/10 flex items-center justify-center"><i class="fas fa-building-columns text-gold text-lg"></i></div>
-                            <p class="font-cormorant text-gold-dark text-xs tracking-[0.15em] uppercase mb-1">Bank Mandiri</p>
-                            <p class="font-jakarta text-charcoal text-lg font-bold mb-1 tracking-wider" id="bank2Number">0987654321</p>
-                            <p class="font-jakarta text-muted text-xs mb-3">a.n. Rahayu</p>
-                            <button onclick="copyToClipboard('0987654321')" class="btn-gold-outline inline-flex items-center gap-2 px-4 py-2 rounded-full text-[11px] tracking-wider uppercase font-jakarta"><i class="fas fa-copy"></i> Salin</button>
-                        </div>
-                    </div>
+                    <div class="reveal-left"><div class="ornament-corner ornament-sm gold-frame rounded-sm bg-white/80 backdrop-blur-sm p-6 text-center gold-shadow"><div class="corner-bl"></div><div class="corner-br"></div><div class="w-12 h-12 mx-auto mb-3 rounded-full bg-kraton/10 flex items-center justify-center"><i class="fas fa-building-columns text-gold text-lg"></i></div><p class="font-cormorant text-gold-dark text-xs tracking-[0.15em] uppercase mb-1">Bank Central Asia</p><p class="font-jakarta text-charcoal text-lg font-bold mb-1 tracking-wider" id="bank1Number">1234567890</p><p class="font-jakarta text-muted text-xs mb-3">a.n. Mawi Asih</p><button onclick="copyToClipboard('1234567890')" class="btn-gold-outline inline-flex items-center gap-2 px-4 py-2 rounded-full text-[11px] tracking-wider uppercase font-jakarta"><i class="fas fa-copy"></i> Salin</button></div></div>
+                    <div class="reveal-right"><div class="ornament-corner ornament-sm gold-frame rounded-sm bg-white/80 backdrop-blur-sm p-6 text-center gold-shadow"><div class="corner-bl"></div><div class="corner-br"></div><div class="w-12 h-12 mx-auto mb-3 rounded-full bg-kraton/10 flex items-center justify-center"><i class="fas fa-building-columns text-gold text-lg"></i></div><p class="font-cormorant text-gold-dark text-xs tracking-[0.15em] uppercase mb-1">Bank Mandiri</p><p class="font-jakarta text-charcoal text-lg font-bold mb-1 tracking-wider" id="bank2Number">0987654321</p><p class="font-jakarta text-muted text-xs mb-3">a.n. Rahayu</p><button onclick="copyToClipboard('0987654321')" class="btn-gold-outline inline-flex items-center gap-2 px-4 py-2 rounded-full text-[11px] tracking-wider uppercase font-jakarta"><i class="fas fa-copy"></i> Salin</button></div></div>
                 </div>
             </div>
         </section>
 
-        <div class="joglo-divider section-cream-kawung">
-            <div class="jd-line"></div><span class="jd-dot"></span>
-            <svg class="jd-icon" viewBox="0 0 400 220" fill="currentColor"><path d="M200 8 L168 48 L172 52 L148 78 L152 82 L120 112 L124 116 L80 148 L84 152 L50 176 L50 195 L130 195 L130 210 L145 210 L145 195 L255 195 L255 210 L270 210 L270 195 L350 195 L350 176 L316 152 L320 148 L276 116 L280 112 L248 82 L252 78 L228 52 L232 48Z"/><rect x="130" y="195" width="15" height="15"/><rect x="255" y="195" width="15" height="15"/></svg>
-            <span class="jd-dot"></span><div class="jd-line"></div>
-        </div>
+        <div class="joglo-divider section-cream-kawung"><div class="jd-line"></div><span class="jd-dot"></span><svg class="jd-icon" viewBox="0 0 400 220" fill="currentColor"><path d="M200 8 L168 48 L172 52 L148 78 L152 82 L120 112 L124 116 L80 148 L84 152 L50 176 L50 195 L130 195 L130 210 L145 210 L145 195 L255 195 L255 210 L270 210 L270 195 L350 195 L350 176 L316 152 L320 148 L276 116 L280 112 L248 82 L252 78 L228 52 L232 48Z"/><rect x="130" y="195" width="15" height="15"/><rect x="255" y="195" width="15" height="15"/></svg><span class="jd-dot"></span><div class="jd-line"></div></div>
 
         <!-- ==================== RSVP ==================== -->
         <section class="py-16 sm:py-24 px-4 section-warm-parang">
@@ -867,79 +679,21 @@
                 <div class="text-center mb-12 reveal">
                     <p class="font-cormorant text-gold-dark text-xs tracking-[0.25em] uppercase mb-2">Konfirmasi Kehadiran</p>
                     <h2 class="font-cinzel text-kraton text-2xl sm:text-3xl font-bold mb-4">RSVP</h2>
-                    <div class="javanese-divider max-w-xs mx-auto">
-                        <span class="dot"></span><span class="line w-8"></span><span class="diamond"></span><span class="line w-8"></span><span class="dot"></span>
-                    </div>
+                    <div class="javanese-divider max-w-xs mx-auto"><span class="dot"></span><span class="line w-8"></span><span class="diamond"></span><span class="line w-8"></span><span class="dot"></span></div>
                     <p class="font-jakarta text-muted text-sm mt-4 max-w-md mx-auto leading-relaxed">Mugi saget konfirmasi kehadiranipun supados panitia saged nyamektakaken sedaya kanthi sae.</p>
                 </div>
-                <div class="reveal">
-                    <div class="ornament-corner gold-frame-double rounded-sm bg-white/80 backdrop-blur-sm p-8 sm:p-10 gold-shadow">
-                        <div class="corner-bl"></div><div class="corner-br"></div>
-                        <form id="rsvpForm" onsubmit="handleRSVP(event)" class="space-y-5">
-                            <div><label class="font-cormorant text-kraton text-sm font-semibold block mb-2">Asma Tamu</label><input type="text" id="rsvpName" class="input-jawa" placeholder="Mlebetaken asma panjenengan..." required></div>
-                            <div>
-                                <label class="font-cormorant text-kraton text-sm font-semibold block mb-2">Konfirmasi Kehadiran</label>
-                                <div class="flex gap-4">
-                                    <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="attendance" value="Hadir" required class="accent-[#D4AF37] w-4 h-4"><span class="font-jakarta text-sm text-charcoal">Hadir</span></label>
-                                    <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="attendance" value="Tidak Hadir" class="accent-[#D4AF37] w-4 h-4"><span class="font-jakarta text-sm text-charcoal">Mboten Saged Hadir</span></label>
-                                </div>
-                            </div>
-                            <div><label class="font-cormorant text-kraton text-sm font-semibold block mb-2">Jumlah Tamu</label><select id="rsvpGuests" class="input-jawa"><option value="1">1 Orang</option><option value="2">2 Orang</option><option value="3">3 Orang</option><option value="4">4 Orang</option><option value="5">5 Orang</option></select></div>
-                            <div><label class="font-cormorant text-kraton text-sm font-semibold block mb-2">Ucapan &amp; Doa</label><textarea id="rsvpMessage" class="input-jawa" rows="3" placeholder="Sekedhik ucapan lan doa kangge mempelai..."></textarea></div>
-                            <button type="submit" class="btn-gold w-full py-3 rounded-full text-sm tracking-wider uppercase font-jakarta"><i class="fas fa-paper-plane mr-2"></i> Kirim Konfirmasi</button>
-                        </form>
-                    </div>
-                </div>
-                <div class="mt-10 reveal">
-                    <div class="ornament-corner ornament-sm gold-frame rounded-sm bg-white/60 backdrop-blur-sm p-6 gold-shadow">
-                        <div class="corner-bl"></div><div class="corner-br"></div>
-                        <p class="font-cormorant text-gold-dark text-xs tracking-[0.15em] uppercase text-center mb-4">Konfirmasi saking Tamu</p>
-                        <div class="rsvp-feed" id="rsvpFeed">
-                            <div class="wish-card"><div class="flex items-center gap-2 mb-2"><div class="w-8 h-8 rounded-full bg-kraton/10 flex items-center justify-center"><i class="fas fa-user text-gold text-xs"></i></div><div><p class="font-jakarta text-charcoal text-sm font-semibold">Budi Santoso</p><p class="font-jakarta text-muted text-[10px]">Hadir - 2 Orang</p></div></div><p class="font-jakarta text-muted text-xs italic leading-relaxed">"Mugi parenga kebahagiaan, sakinah mawaddah warahmah."</p></div>
-                            <div class="wish-card"><div class="flex items-center gap-2 mb-2"><div class="w-8 h-8 rounded-full bg-kraton/10 flex items-center justify-center"><i class="fas fa-user text-gold text-xs"></i></div><div><p class="font-jakarta text-charcoal text-sm font-semibold">Siti Aminah</p><p class="font-jakarta text-muted text-[10px]">Hadir - 1 Orang</p></div></div><p class="font-jakarta text-muted text-xs italic leading-relaxed">"Samoga langgeng salawase, dinten lan wengi."</p></div>
-                        </div>
-                    </div>
-                </div>
+                <div class="reveal"><div class="ornament-corner gold-frame-double rounded-sm bg-white/80 backdrop-blur-sm p-8 sm:p-10 gold-shadow"><div class="corner-bl"></div><div class="corner-br"></div><form id="rsvpForm" onsubmit="handleRSVP(event)" class="space-y-5"><div><label class="font-cormorant text-kraton text-sm font-semibold block mb-2">Asma Tamu</label><input type="text" id="rsvpName" class="input-jawa" placeholder="Mlebetaken asma panjenengan..." required></div><div><label class="font-cormorant text-kraton text-sm font-semibold block mb-2">Konfirmasi Kehadiran</label><div class="flex gap-4"><label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="attendance" value="Hadir" required class="accent-[#D4AF37] w-4 h-4"><span class="font-jakarta text-sm text-charcoal">Hadir</span></label><label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="attendance" value="Tidak Hadir" class="accent-[#D4AF37] w-4 h-4"><span class="font-jakarta text-sm text-charcoal">Mboten Saged Hadir</span></label></div></div><div><label class="font-cormorant text-kraton text-sm font-semibold block mb-2">Jumlah Tamu</label><select id="rsvpGuests" class="input-jawa"><option value="1">1 Orang</option><option value="2">2 Orang</option><option value="3">3 Orang</option><option value="4">4 Orang</option><option value="5">5 Orang</option></select></div><div><label class="font-cormorant text-kraton text-sm font-semibold block mb-2">Ucapan &amp; Doa</label><textarea id="rsvpMessage" class="input-jawa" rows="3" placeholder="Sekedhik ucapan lan doa kangge mempelai..."></textarea></div><button type="submit" class="btn-gold w-full py-3 rounded-full text-sm tracking-wider uppercase font-jakarta"><i class="fas fa-paper-plane mr-2"></i> Kirim Konfirmasi</button></form></div></div>
+                <div class="mt-10 reveal"><div class="ornament-corner ornament-sm gold-frame rounded-sm bg-white/60 backdrop-blur-sm p-6 gold-shadow"><div class="corner-bl"></div><div class="corner-br"></div><p class="font-cormorant text-gold-dark text-xs tracking-[0.15em] uppercase text-center mb-4">Konfirmasi saking Tamu</p><div class="rsvp-feed" id="rsvpFeed"><div class="wish-card"><div class="flex items-center gap-2 mb-2"><div class="w-8 h-8 rounded-full bg-kraton/10 flex items-center justify-center"><i class="fas fa-user text-gold text-xs"></i></div><div><p class="font-jakarta text-charcoal text-sm font-semibold">Budi Santoso</p><p class="font-jakarta text-muted text-[10px]">Hadir - 2 Orang</p></div></div><p class="font-jakarta text-muted text-xs italic leading-relaxed">"Mugi parenga kebahagiaan, sakinah mawaddah warahmah."</p></div><div class="wish-card"><div class="flex items-center gap-2 mb-2"><div class="w-8 h-8 rounded-full bg-kraton/10 flex items-center justify-center"><i class="fas fa-user text-gold text-xs"></i></div><div><p class="font-jakarta text-charcoal text-sm font-semibold">Siti Aminah</p><p class="font-jakarta text-muted text-[10px]">Hadir - 1 Orang</p></div></div><p class="font-jakarta text-muted text-xs italic leading-relaxed">"Samoga langgeng salawase, dinten lan wengi."</p></div></div></div></div>
             </div>
         </section>
 
-        <div class="joglo-divider-lg section-warm-parang flex items-center justify-center">
-            <div class="jd-line"></div><span class="jd-dot"></span>
-            <svg class="jd-icon mx-auto" viewBox="0 0 400 220" fill="currentColor"><path d="M200 8 L168 48 L172 52 L148 78 L152 82 L120 112 L124 116 L80 148 L84 152 L50 176 L50 195 L130 195 L130 210 L145 210 L145 195 L255 195 L255 210 L270 210 L270 195 L350 195 L350 176 L316 152 L320 148 L276 116 L280 112 L248 82 L252 78 L228 52 L232 48Z"/><rect x="130" y="195" width="15" height="15"/><rect x="255" y="195" width="15" height="15"/><rect x="80" y="148" width="4" height="47" opacity="0.6"/><rect x="316" y="148" width="4" height="47" opacity="0.6"/></svg>
-            <span class="jd-dot"></span><div class="jd-line"></div>
-        </div>
+        <div class="joglo-divider-lg section-warm-parang flex items-center justify-center"><div class="jd-line"></div><span class="jd-dot"></span><svg class="jd-icon mx-auto" viewBox="0 0 400 220" fill="currentColor"><path d="M200 8 L168 48 L172 52 L148 78 L152 82 L120 112 L124 116 L80 148 L84 152 L50 176 L50 195 L130 195 L130 210 L145 210 L145 195 L255 195 L255 210 L270 210 L270 195 L350 195 L350 176 L316 152 L320 148 L276 116 L280 112 L248 82 L252 78 L228 52 L232 48Z"/><rect x="130" y="195" width="15" height="15"/><rect x="255" y="195" width="15" height="15"/><rect x="80" y="148" width="4" height="47" opacity="0.6"/><rect x="316" y="148" width="4" height="47" opacity="0.6"/></svg><span class="jd-dot"></span><div class="jd-line"></div></div>
 
         <!-- ==================== FOOTER ==================== -->
         <footer class="py-16 sm:py-24 px-4 section-dark-parang relative overflow-hidden">
-            <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[250px] opacity-[0.06] pointer-events-none">
-                <svg viewBox="0 0 200 280" fill="currentColor" class="w-full text-gold"><path d="M100,8 C100,8 88,28 75,45 C62,62 48,55 50,72 C52,89 35,85 38,102 C41,119 22,118 28,138 C34,158 18,165 30,185 C42,205 38,225 52,242 C66,259 85,272 100,278 C115,272 134,259 148,242 C162,225 158,205 170,185 C182,165 166,158 172,138 C178,118 159,119 162,102 C165,85 148,89 150,72 C152,55 138,62 125,45 C112,28 100,8 100,8Z"/><circle cx="100" cy="6" r="4"/></svg>
-            </div>
+            <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[250px] opacity-[0.06] pointer-events-none"><svg viewBox="0 0 200 280" fill="currentColor" class="w-full text-gold"><path d="M100,8 C100,8 88,28 75,45 C62,62 48,55 50,72 C52,89 35,85 38,102 C41,119 22,118 28,138 C34,158 18,165 30,185 C42,205 38,225 52,242 C66,259 85,272 100,278 C115,272 134,259 148,242 C162,225 158,205 170,185 C182,165 166,158 172,138 C178,118 159,119 162,102 C165,85 148,89 150,72 C152,55 138,62 125,45 C112,28 100,8 100,8Z"/><circle cx="100" cy="6" r="4"/></svg></div>
             <div class="max-w-2xl mx-auto relative z-10 text-center">
-                <div class="reveal-scale">
-                    <div class="ornament-corner gold-frame-double rounded-sm bg-kraton-dark/80 backdrop-blur-sm p-10 sm:p-14 gold-shadow-strong">
-                        <div class="corner-bl"></div><div class="corner-br"></div>
-                        <div class="javanese-divider mb-8">
-                            <span class="dot" style="background:rgba(232,212,139,0.6);"></span>
-                            <span class="line w-12" style="background:linear-gradient(90deg,transparent,rgba(232,212,139,0.5),transparent);"></span>
-                            <span class="diamond" style="background:rgba(232,212,139,0.6);"></span>
-                            <span class="line w-12" style="background:linear-gradient(90deg,transparent,rgba(232,212,139,0.5),transparent);"></span>
-                            <span class="dot" style="background:rgba(232,212,139,0.6);"></span>
-                        </div>
-                        <p class="font-cormorant text-gold-light/70 text-xs tracking-[0.3em] uppercase mb-4">Matur Nuwun</p>
-                        <h2 class="font-cinzel text-gold text-2xl sm:text-3xl font-bold mb-6">Terima Kasih</h2>
-                        <p class="font-jakarta text-gold-light/80 text-sm leading-relaxed mb-4 max-w-md mx-auto">Atas kehadiran dan doa restu yang diberikan, kami mengucapkan terima kasih yang sebesar-besarnya. Mugi kebahagiaan ini menjadi berkah bagi kita semua.</p>
-                        <p class="font-cormorant text-gold-light/60 text-sm italic mb-8">"Matur nuwun santun panjenengan sedaya."</p>
-                        <p class="font-cinzel text-gold text-xl sm:text-2xl font-bold mb-1">Mawi Asih &amp; Rahayu</p>
-                        <p class="font-cormorant text-gold-light/60 text-sm">28 Desember 2025</p>
-                        <div class="javanese-divider mt-8">
-                            <span class="dot" style="background:rgba(232,212,139,0.6);"></span>
-                            <span class="line w-12" style="background:linear-gradient(90deg,transparent,rgba(232,212,139,0.5),transparent);"></span>
-                            <span class="diamond" style="background:rgba(232,212,139,0.6);"></span>
-                            <span class="line w-12" style="background:linear-gradient(90deg,transparent,rgba(232,212,139,0.5),transparent);"></span>
-                            <span class="dot" style="background:rgba(232,212,139,0.6);"></span>
-                        </div>
-                    </div>
-                </div>
+                <div class="reveal-scale"><div class="ornament-corner gold-frame-double rounded-sm bg-kraton-dark/80 backdrop-blur-sm p-10 sm:p-14 gold-shadow-strong"><div class="corner-bl"></div><div class="corner-br"></div><div class="javanese-divider mb-8"><span class="dot" style="background:rgba(232,212,139,0.6);"></span><span class="line w-12" style="background:linear-gradient(90deg,transparent,rgba(232,212,139,0.5),transparent);"></span><span class="diamond" style="background:rgba(232,212,139,0.6);"></span><span class="line w-12" style="background:linear-gradient(90deg,transparent,rgba(232,212,139,0.5),transparent);"></span><span class="dot" style="background:rgba(232,212,139,0.6);"></span></div><p class="font-cormorant text-gold-light/70 text-xs tracking-[0.3em] uppercase mb-4">Matur Nuwun</p><h2 class="font-cinzel text-gold text-2xl sm:text-3xl font-bold mb-6">Terima Kasih</h2><p class="font-jakarta text-gold-light/80 text-sm leading-relaxed mb-4 max-w-md mx-auto">Atas kehadiran dan doa restu yang diberikan, kami mengucapkan terima kasih yang sebesar-besarnya. Mugi kebahagiaan ini menjadi berkah bagi kita semua.</p><p class="font-cormorant text-gold-light/60 text-sm italic mb-8">"Matur nuwun santun panjenengan sedaya."</p><p class="font-cinzel text-gold text-xl sm:text-2xl font-bold mb-1">Mawi Asih &amp; Rahayu</p><p class="font-cormorant text-gold-light/60 text-sm">28 Desember 2025</p><div class="javanese-divider mt-8"><span class="dot" style="background:rgba(232,212,139,0.6);"></span><span class="line w-12" style="background:linear-gradient(90deg,transparent,rgba(232,212,139,0.5),transparent);"></span><span class="diamond" style="background:rgba(232,212,139,0.6);"></span><span class="line w-12" style="background:linear-gradient(90deg,transparent,rgba(232,212,139,0.5),transparent);"></span><span class="dot" style="background:rgba(232,212,139,0.6);"></span></div></div></div>
                 <p class="font-jakarta text-gold-light/30 text-[10px] tracking-wider mt-8 uppercase">Made with <i class="fas fa-heart text-gold/40"></i> for Javanese Heritage</p>
             </div>
         </footer>
